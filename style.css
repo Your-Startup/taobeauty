@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,300&display=swap');
 
+@font-face {
+    font-family: 'Alethia Pro';
+    src: url('./fonts/Alethiaproregular.woff') format('woff'), url('fonts/Alethiaproregular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alethia Pro';
+    src: url('./fonts/Alethiaproitalic.woff') format('woff'), url('fonts/Alethiaproitalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
 .container {
     max-width: 1140px;
     padding: 0 20px;
@@ -47,6 +61,8 @@ ul {
     background-color: #476B7A;
 }
 
+/* header */
+
 header {
     padding: 10px 0;
     border-bottom: 1px solid #B48956;
@@ -82,6 +98,8 @@ header {
     text-transform: uppercase;
     color: #000000;
 }
+
+/* main-slider */
 
 .main-slider__btn {
     padding-right: 145px;
@@ -222,4 +240,198 @@ header {
 .social__item img {
     width: 30px;
     height: 30px;
+}
+
+/* main-text */
+
+.main-text {
+    padding: 105px 0 200px;
+}
+
+.main-text__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.main-text__content {
+    max-width: 550px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+}
+
+.main-text__content p {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main-text__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* servises */
+
+.services {
+    margin-bottom: 200px;
+}
+
+.services__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-img {
+    margin-bottom: 70px;
+}
+
+.services__heading {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140.62%;
+    text-align: center;
+    letter-spacing: 0.205em;
+    text-transform: uppercase;
+    color: #B48956;
+    margin-bottom: 60px;
+}
+
+/* accordion */
+
+.accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s linear;
+}
+
+.accordion__heading {
+    cursor: pointer;
+}
+
+.services .accordion__block .accordion__heading {
+    text-align: center;
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 140.62%;
+    text-align: center;
+    color: #B48956;
+    transition: color .4s linear;
+    will-change: text-transform;
+    transition: text-transform .4s linear, color .4s linear;
+}
+
+.services .accordion__block .accordion__heading:hover {
+    color: #476B7A;
+}
+
+.services .accordion__block.opend .accordion__heading {
+    color: #476B7A;
+    text-transform: uppercase;
+}
+
+.services__inner-list {
+    padding: 5px 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.services__inner-item {
+    position: relative;
+    padding-left: 30px;
+    border-color: #B48956;
+    transition: border .4s linear;
+}
+
+.services__inner-item span {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    padding: 0 5px;
+    border: 1px solid #B48956;
+    font-family: 'Jost', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180.12%;
+}
+
+.services__inner-item a {
+    font-family: 'Jost', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180.12%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
+.services__inner-item:hover {
+    border-bottom: 1px solid #B48956;
+}
+
+.services__inner-item:hover a {
+    font-weight: bold;
+}
+
+/* certificates */
+
+.certificates {
+    margin-bottom: 110px;
+}
+
+.certificates a img {
+    transform: scaleX(.8);
+    transition: transform .4s linear;
+}
+
+.certificates a {
+    background-color: #B48956;
+    padding: 38px 0 30px;
+    text-decoration: none;
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140.62%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: background-color .4s linear;
+}
+
+.certificates a:hover img {
+    transform: scaleX(1);
+}
+
+.certificates a:active {
+    background-color: #476B7A;
+}
+
+.certificates a span {
+    padding-right: 40px;
+}
+
+.certificates .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
