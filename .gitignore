@@ -1,3 +1,5 @@
 .cache/
 .ssh/
 .bash_history
+.vscode/
+wp-content/uploads/
