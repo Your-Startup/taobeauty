@@ -28,6 +28,24 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<ul class="social__list">
+	<li class="social__item">
+		<a href="#">
+			<img src="<?= get_template_directory_uri() ?>/assets/img/vk.svg" alt="">
+		</a>
+	</li>
+	<li class="social__item">
+		<a href="#">
+			<img src="<?= get_template_directory_uri() ?>/assets/img/tg.svg" alt="">
+		</a>
+	</li>
+	<li class="social__item">
+		<a href="#">
+			<img src="<?= get_template_directory_uri() ?>/assets/img/whatsapp.svg" alt="">
+		</a>
+	</li>
+</ul>
+
 <?php wp_footer(); ?>
 
 </body>

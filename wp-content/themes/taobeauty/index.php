@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Главная
  * The main template file
  *
  * This is the most generic template file in a WordPress theme
@@ -14,42 +15,33 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+	<main id="primary" class="main site-main">
+		<section class="main-slider">
+            <div class="container">
+                <h1 class="main-slider__title">Hydrafacial</h1>
+                <div class="main-slider__heading">Голливудский гидропилиниг</div>
+                <div class="main-slider__text">Cовременная методика неинвазивной механической чистки кожи</div>
+                <a href="#" class="btn main-slider__btn">Подробнее</a>
+                <ul class="main-slider__pagination swiper-pagination"></ul>
+            </div>
+            <div class="swiper main-slider__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/main-slider.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/main-slider.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/main-slider.jpg" alt="">
+                  </div>
+                </div>
+                <div class="main-slider__next">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/next-slider.svg" alt="">
+                </div>
+            </div>
+        </section>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</main><!-- #main -->
 
 <?php

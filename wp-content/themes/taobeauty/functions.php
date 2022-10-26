@@ -138,19 +138,41 @@ add_action( 'widgets_init', 'taobeauty_widgets_init' );
  * Enqueue scripts and styles.
  */
 function taobeauty_scripts() {
+
 	wp_enqueue_style( 'taobeauty-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'taobeauty-style', 'rtl', 'replace' );
 
 	wp_enqueue_style( 'taobeauty-base-style', get_template_directory_uri() . '/assets/css/base.css', array(), _S_VERSION );
 	wp_style_add_data( 'taobeauty-base-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'taobeauty-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// TODO: include base.js
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	$pagename = get_post_field( 'post_name', get_post() );
+
+	if ($pagename == 'home') {
+		wp_enqueue_style( 'taobeauty-swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), _S_VERSION );
+		wp_style_add_data( 'taobeauty-swiper-style', 'rtl', 'replace' );
+
+		wp_enqueue_script('your-startup-script-swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), _S_VERSION);
+	}
+	
+	error_log(file_exists(get_template_directory() . '/assets/css/' . $pagename . '.css'));
+
+	if (file_exists(get_template_directory() . '/assets/css/' . $pagename . '.css')) {
+		wp_enqueue_style( 'your-startup-style-' . $pagename, get_template_directory_uri() . '/assets/css/' . $pagename . '.css', array(), _S_VERSION );
+		wp_style_add_data( 'your-startup-style-' . $pagename, 'rtl', 'replace' );
+	}
+
+	if (file_exists(get_template_directory() . '/assets/js/' . $pagename . '.js')) {
+		wp_enqueue_script('your-startup-script-' . $pagename, get_template_directory_uri() . '/assets/js/' . $pagename . '.js', array(), _S_VERSION);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'taobeauty_scripts' );
+
+function url_exists($url){
+	$headers=get_headers($url);
+	return stripos($headers[0],"200 OK")?true:false;
+}
 
 /**
  * Implement the Custom Header feature.

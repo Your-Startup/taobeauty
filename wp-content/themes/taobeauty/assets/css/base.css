@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: 'Alethia Pro';
-    src: url('./fonts/Alethiaproregular.woff') format('woff'), url('fonts/Alethiaproregular.woff2') format('woff2');
+    src: url('../fonts/Alethiaproregular.woff') format('woff'), url('../fonts/Alethiaproregular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Alethia Pro';
-    src: url('./fonts/Alethiaproitalic.woff') format('woff'), url('fonts/Alethiaproitalic.woff2') format('woff2');
+    src: url('../fonts/Alethiaproitalic.woff') format('woff'), url('../fonts/Alethiaproitalic.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
 }
@@ -101,4 +101,30 @@ header {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #000000;
+}
+
+.social__list {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    background-color: #476B7A;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.social__item:last-child {
+    margin-bottom: 0;
+}
+
+.social__item img {
+    width: 30px;
+    height: 30px;
 }
