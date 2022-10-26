@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,300&display=swap');
+
+@font-face {
+    font-family: 'Alethia Pro';
+    src: url('./fonts/Alethiaproregular.woff') format('woff'), url('fonts/Alethiaproregular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alethia Pro';
+    src: url('./fonts/Alethiaproitalic.woff') format('woff'), url('fonts/Alethiaproitalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140.62%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 16px 14px;
+    transition: background-color .4s linear;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: #B48956;
+}
+
+.btn:active {
+    background-color: #476B7A;
+}
+
+/* header */
+
+header {
+    padding: 10px 0;
+    border-bottom: 1px solid #B48956;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-item{
+    margin-right: 40px;
+}
+
+.menu-item:last-child {
+    margin-right: 0;
+}
+
+.menu-item a {
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 111.62%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+}
