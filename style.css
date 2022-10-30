@@ -326,8 +326,6 @@ header {
     text-align: center;
     color: #B48956;
     transition: color .4s linear;
-    will-change: text-transform;
-    transition: text-transform .4s linear, color .4s linear;
 }
 
 .services .accordion__block .accordion__heading:hover {
@@ -336,7 +334,6 @@ header {
 
 .services .accordion__block.opend .accordion__heading {
     color: #476B7A;
-    text-transform: uppercase;
 }
 
 .services__inner-list {
@@ -530,10 +527,11 @@ header {
     width: 19px;
     height: 1px;
     background-color: #B48956;
+    transition: transform .4s linear;
 }
 
 .prices__item.opend .accordion__heading::after {
-    visibility: hidden;
+    transform: translateY(-50%);
 }
 
 .prices__pricelist {
@@ -580,7 +578,13 @@ header {
     padding-bottom: 10px;
 }
 
-.prices__img {
-    display: block;
-    margin: 0 auto 40px;
+.prices__btn {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 0 0 40px;
 }

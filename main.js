@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     content.style.maxHeight = null;
   };
 
+  function ClosedAcc() {
+    this.parentElement.style.maxHeight = null;
+    this.parentElement.parentElement.parentElement.classList.remove("opend");
+  }
+
   if(document.querySelector('.main-slider__slider.swiper')) {
     const mainSlider = new Swiper('.main-slider__slider.swiper', {
         direction: 'horizontal',
@@ -39,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const heading = accordion.querySelector(".accordion__heading");
       const content = accordion.querySelector(".accordion__content");
     
-      heading.onclick = () => {
+      heading.onmouseenter = () => {
         if (content.style.maxHeight) {
           closeAccordion(accordion);
         } else {
@@ -71,5 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
     });
+  }
+
+  if(document.querySelector('.prices__btn')) {
+    let btns = document.querySelectorAll('.prices__btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', ClosedAcc);
+    })
   }
 });
