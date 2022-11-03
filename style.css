@@ -279,6 +279,11 @@ header {
     margin-bottom: 200px;
 }
 
+.services__list {
+    position: relative;
+    z-index: 2;
+}
+
 .services__wrap {
     position: relative;
     display: flex;
@@ -385,6 +390,13 @@ header {
 
 .services__inner-item:hover a {
     font-weight: bold;
+}
+
+.services__decor-img {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    transition: all 1s linear;
 }
 
 /* certificates */

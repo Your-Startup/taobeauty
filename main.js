@@ -39,12 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if(document.querySelector('.accordion__block')) {
     const accordionsServices = document.querySelectorAll(".accordion__block");
+    const img1 = document.querySelector('.img-1');
+    const img2 = document.querySelector('.img-2');
+    const img3 = document.querySelector('.img-3');
+    const decorImgs = document.querySelectorAll('.services__decor-img');
 
     accordionsServices.forEach((accordion) => {
       const heading = accordion.querySelector(".accordion__heading");
       const content = accordion.querySelector(".accordion__content");
     
-      heading.onmouseenter = () => {
+      accordion.onmouseenter = () => {
         if (content.style.maxHeight) {
           closeAccordion(accordion);
         } else {
@@ -52,6 +56,84 @@ document.addEventListener('DOMContentLoaded', () => {
           openAccordion(accordion);
         }
       };
+
+      accordion.onmouseleave = () => {
+        closeAccordion(accordion);
+      }
+    });
+
+    accordionsServices.forEach(acc => {
+      acc.addEventListener('mouseenter', function() {
+
+        decorImgs.forEach(img => {
+          img.style.display = 'block';
+        });
+
+        img1.src = this.dataset.imgone;
+        img2.src = this.dataset.imgtwo;
+        img3.src = this.dataset.imgthree;
+
+        if(this.classList.contains('block-1')) {
+          img1.style.left = 0;
+          img1.style.top = 0;
+
+          img2.style.left = 0;
+          img2.style.top = `45%`;
+
+          img3.style.top = 0;
+          img3.style.right = 0;
+        }
+
+        if(this.classList.contains('block-2')) {
+          img1.style.left = 0;
+          img1.style.top = `60%`;
+
+          img2.style.left = `100%`;
+          img2.style.top = `45%`;
+
+          img3.style.top = 0;
+          img3.style.right = 0;
+        }
+
+        if(this.classList.contains('block-3')) {
+          img1.style.left = 0;
+          img1.style.top = `10%`;
+
+          img2.style.left = `100%`;
+          img2.style.top = `45%`;
+
+          img3.style.top = 0;
+          img3.style.right = 0;
+        }
+
+        if(this.classList.contains('block-4')) {
+          img1.style.left = 0;
+          img1.style.top = `20%`;
+
+          img2.style.left = 0;
+          img2.style.top = `80%`;
+
+          img3.style.top = `90%`;
+          img3.style.right = 0;
+        }
+
+        if(this.classList.contains('block-5')) {
+          img1.style.left = 0;
+          img1.style.top = `40%`;
+
+          img2.style.left = `100%`;
+          img2.style.top = `80%`;
+
+          img3.style.top = `50%`;
+          img3.style.right = 0;
+        }
+      });
+
+        document.querySelector('.services').addEventListener('mouseleave', () => {
+          decorImgs.forEach(img => {
+            img.style.display = 'none';
+          });
+        });
     });
   }
 
