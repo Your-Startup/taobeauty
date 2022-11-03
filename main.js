@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-        document.querySelector('.services').addEventListener('mouseleave', () => {
+        document.querySelector('.services__wrap').addEventListener('mouseleave', () => {
           decorImgs.forEach(img => {
             img.style.display = 'none';
           });
