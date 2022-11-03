@@ -621,6 +621,7 @@ header {
     right: 0;
     top: 0px;
     z-index: 1;
+    object-fit: cover;
 }
 
 .area__heading {
