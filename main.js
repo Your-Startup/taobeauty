@@ -166,4 +166,23 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', ClosedAcc);
     })
   }
+
+  if(document.querySelector('.area__slider.swiper')) {
+    const mainSlider = new Swiper('.area__slider.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 70,
+        pagination: {
+          el: '.area__pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.area-next',
+          prevEl: '.area-prev',
+        },
+        autoplay: {
+          delay: 2000,
+        },
+    });
+  }
 });
