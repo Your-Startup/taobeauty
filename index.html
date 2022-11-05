@@ -806,19 +806,99 @@
                         <span>адрес центра</span>
                     </h2>
                     <div class="contacts__address">
-                        г. Москва, ул. Большая Садовая, 5к1
+                        г. Москва, <br> ул. Большая Садовая, 5к1
                     </div>
-                    <a href="">+ 7 (495) 021-12-95</a>
-                    <a href="">info@tao-beauty.ru</a>
+                    <a class="contacts__link contacts__tel" href="tel:+74950211295">+ 7 (495) 021-12-95</a>
+                    <a class="contacts__link contacts__mail" href="mailto:info@tao-beauty.ru">info@tao-beauty.ru</a>
                     <div>Ежедневно: 10:00–22:00</div>
-                    <a href="">+ 7 (495) 021-12-95</a>
+                    <a class="contacts__link contacts__tel" href="tel:+74950211295">+ 7 (495) 021-12-95</a>
+                    <form action="#" class="contacts__form">
+                        <label class="contacts__label" for="email">
+                            <span>Ваш e-mail</span>
+                            <input type="email" name="email" id="email">
+                        </label>
+                        <input class="contacts__submit form-submit" type="submit" value="Получать спецпредложения">
+                    </form>
                 </div>
                 <div class="contacts__map">
-
+                    <img class="contacts__img" src="./img/office.jpg" alt="">
+                    <button class="contacts__btn">показать на карте</button>
+                    <div class="contacts__bg"></div>
+                    <div id="contacts-map"></div>
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="">
+                            Сертификаты
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            До и после
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Оборудование
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Документы
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Блог
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__socials">
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="./img/whatsapp.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="./img/tg.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="./img/vk.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__content">
+                <div class="footer__flex">
+                    <div class="footer__text">
+                        <a class="footer__contact" href="tel:+74950211295">+ 7 (495) 021-12-95</a>
+                        <a class="footer__contact" href="mailto:info@tao-beauty.ru">info@tao-beauty.ru</a>
+                        <div class="footer__address">
+                            Москва, 125047, ул. Большая Садовая, 5к1
+                            <br> Вход со стороны улицы Гашека
+                            <br> Ежедневно: 10:00–22:00
+                        </div>
+                    </div>
+                    <div class="footer__privacy">
+                        <a class="footer__link" href="">Политика конфиденциальности</a>
+                        <a class="footer__link" href="">Карточка организации</a>
+                    </div>
+                </div>
+                <a class="footer__qr" href="">
+                    <img src="./img/qr.png" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
 </body>

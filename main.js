@@ -221,14 +221,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (document.querySelector('#map')) {
+    if (document.querySelector('#contacts-map')) {
         ymaps.ready(init);
 
         function init() {
-            let myMap = new ymaps.Map("map", {
+            let myMap = new ymaps.Map("contacts-map", {
                 center: [55.76, 37.64],
-                zoom: 7
+                zoom: 7,
+                controls: []
             });
         }
+
+        const bg = document.querySelector('.contacts__bg');
+        const btn = document.querySelector('.contacts__btn');
+        const map = document.querySelector('#contacts-map');
+
+        bg.addEventListener('click', () => {
+            map.classList.toggle('active');
+            if (map.classList.contains('active')) {
+                map.style.transform = 'translateX(0)';
+            } else {
+                map.removeAttribute('style');
+            }
+        });
     }
 });
