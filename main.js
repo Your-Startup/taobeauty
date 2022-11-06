@@ -235,6 +235,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 init: function() {
                     document.querySelector('.specialists__pagination .swiper-pagination-bullet').textContent = 1;
                 }
+            },
+            breakpoints: {
+                1700: {
+                    spaceBetween: 450,
+                    slidesPerView: .9,
+                }
             }
         });
 
@@ -260,14 +266,16 @@ document.addEventListener('DOMContentLoaded', () => {
             setElem.style.left = `${example.getBoundingClientRect().left}px`;
         }
 
-        const leftEl = document.querySelector('.specialists__left');
-        const rightEl = document.querySelector('.specialists__right');
+        function setRight(setElem, example) {
+            setElem.style.right = `${example.getBoundingClientRect().right}px`;
+        }
 
-        setLeft(leftEl, heading);
+        // const leftEl = document.querySelector('.specialists__left');
+        // const rightEl = document.querySelector('.specialists__right');
 
-        leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
+        // leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
 
-        rightEl.style.right = `${heading.getBoundingClientRect().left}px`
+        // rightEl.style.right = `${heading.getBoundingClientRect().left}px`
 
         setLeft(content, heading);
         swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
@@ -275,6 +283,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
             setLeft(content, heading);
             swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
+            // leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
+            // rightEl.style.right = `${heading.getBoundingClientRect().left}px`
         });
     }
 
