@@ -431,10 +431,10 @@ header {
 }
 
 .services__decor-img {
-    display: none;
     position: absolute;
     z-index: 1;
-    transition: all .5s linear;
+    opacity: 0;
+    transition: all .8s linear;
 }
 
 
@@ -843,6 +843,7 @@ header {
     justify-content: space-between;
     margin-bottom: 50px;
     position: relative;
+    overflow: hidden;
 }
 
 .specialists__content {
@@ -907,11 +908,28 @@ header {
     border: 1px solid #B48956;
     padding: 40px 14px 40px 40px;
     position: relative;
-    left: -60px;
+    left: -300px;
     transition: left .4s linear;
 }
 
-.specialists__slider .swiper-slide.swiper-slide-active .specialists__block {
+.specialists__nav {
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.specialists__left {
+    left: 15%;
+}
+
+.specialists__right {
+    right: 20%;
+}
+
+.specialists__slider .swiper-slide.swiper-slide-active .specialists__block,
+.specialists__slider .swiper-slide.swiper-slide-prev .specialists__block {
     left: 0;
 }
 
@@ -1266,14 +1284,11 @@ header {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #FFFFFF;
-    position: absolute;
-    cursor: pointer;
     background-color: transparent;
     z-index: 3;
     border: none;
-    transform: rotate(-90deg) translateY(-25px);
-    top: 50%;
-    right: -15%;
+    transform: rotate(-90deg);
+    white-space: nowrap
 }
 
 .contacts__bg {
@@ -1285,6 +1300,8 @@ header {
     bottom: 0;
     width: 65px;
     background: #476B7A;
+    display: flex;
+    justify-content: center;
     transition: background-color .4s linear;
 }
 

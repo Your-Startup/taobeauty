@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ey = e.clientY;
 
                 decorImgs.forEach(img => {
-                    img.style.display = 'block';
+                    img.style.opacity = 1;
                 });
 
                 img1.querySelector('img').src = this.dataset.imgone;
@@ -137,25 +137,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             accordionsServices.forEach(acc => {
                 acc.addEventListener('mousemove', function(e) {
-                    if (e.target.classList.contains('accordion__heading')) {
-                        EX = e.x;
-                        EY = e.y;
+                    EX = e.x;
+                    EY = e.y;
 
-                        img1.querySelector('img').style.left = `${ex - EX}px`;
-                        img1.querySelector('img').style.top = `${ey - EY}px`;
+                    img1.querySelector('img').style.left = `${ex - EX}px`;
+                    img1.querySelector('img').style.top = `${ey - EY}px`;
 
-                        img2.querySelector('img').style.left = `${ex - EX}px`;
-                        img2.querySelector('img').style.top = `${ey - EY}px`;
+                    img2.querySelector('img').style.left = `${ex - EX}px`;
+                    img2.querySelector('img').style.top = `${ey - EY}px`;
 
-                        img3.querySelector('img').style.left = `${ex - EX}px`;
-                        img3.querySelector('img').style.top = `${ey - EY}px`;
-                    }
+                    img3.querySelector('img').style.left = `${ex - EX}px`;
+                    img3.querySelector('img').style.top = `${ey - EY}px`;
                 })
             });
 
             document.querySelector('.services__list').addEventListener('mouseleave', () => {
                 decorImgs.forEach(img => {
-                    img.style.display = 'none';
+                    img.style.opacity = 0;
                     img.querySelector('img').removeAttribute('style');
                 });
             });
@@ -220,11 +218,18 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: false,
             slidesPerView: 1,
             speed: 400,
-            spaceBetween: 350,
+            spaceBetween: 250,
             grabCursor: true,
             pagination: {
                 el: '.specialists__pagination',
                 clickable: true,
+            },
+            // autoplay: {
+            //     delay: 2000,
+            // },
+            navigation: {
+                nextEl: '.specialists__right',
+                prevEl: '.specialists__left',
             },
             on: {
                 init: function() {
@@ -254,6 +259,15 @@ document.addEventListener('DOMContentLoaded', () => {
         function setLeft(setElem, example) {
             setElem.style.left = `${example.getBoundingClientRect().left}px`;
         }
+
+        const leftEl = document.querySelector('.specialists__left');
+        const rightEl = document.querySelector('.specialists__right');
+
+        setLeft(leftEl, heading);
+
+        leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
+
+        rightEl.style.right = `${heading.getBoundingClientRect().left}px`
 
         setLeft(content, heading);
         swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
@@ -295,6 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.querySelector('.contacts__btn');
         const map = document.querySelector('#contacts-map');
 
+        btn.style.width = `${bg.getBoundingClientRect().height}px`
+
         bg.addEventListener('click', () => {
             map.classList.toggle('active');
             bg.classList.toggle('active');
@@ -302,11 +318,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (map.classList.contains('active')) {
                 map.style.transform = 'translateX(0)';
                 btn.textContent = btn.dataset.show;
-                btn.style.transform = `rotate(-90deg) translateY(-60px)`;
             } else {
                 map.removeAttribute('style');
                 btn.textContent = btn.dataset.hide;
-                btn.removeAttribute('style');
             }
         });
     }
