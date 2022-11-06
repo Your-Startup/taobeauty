@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.main-slider__slider.swiper')) {
         const mainSlider = new Swiper('.main-slider__slider.swiper', {
             direction: 'horizontal',
-            loop: true,
             speed: 1000,
             pagination: {
                 el: '.main-slider__pagination',
@@ -31,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             navigation: {
                 nextEl: '.main-slider__next',
+                prevEl: '.main-slider__prev'
             },
             autoplay: {
                 delay: 3000,
@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const img2 = document.querySelector('.img-2');
         const img3 = document.querySelector('.img-3');
         const decorImgs = document.querySelectorAll('.services__decor-img');
+
+        let ex, ey, EX, EY;
 
         accordionsServices.forEach((accordion) => {
             const heading = accordion.querySelector(".accordion__heading");
@@ -64,15 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         accordionsServices.forEach(acc => {
-            acc.addEventListener('mouseenter', function() {
+            acc.addEventListener('mouseenter', function(e) {
+
+                ex = e.clientX;
+                ey = e.clientY;
 
                 decorImgs.forEach(img => {
                     img.style.display = 'block';
                 });
 
-                img1.src = this.dataset.imgone;
-                img2.src = this.dataset.imgtwo;
-                img3.src = this.dataset.imgthree;
+                img1.querySelector('img').src = this.dataset.imgone;
+                img2.querySelector('img').src = this.dataset.imgtwo;
+                img3.querySelector('img').src = this.dataset.imgthree;
 
                 if (this.classList.contains('block-1')) {
                     img1.style.left = 0;
@@ -130,9 +135,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            accordionsServices.forEach(acc => {
+                acc.addEventListener('mousemove', function(e) {
+                    if (e.target.classList.contains('accordion__heading')) {
+                        EX = e.x;
+                        EY = e.y;
+
+                        img1.querySelector('img').style.left = `${ex - EX}px`;
+                        img1.querySelector('img').style.top = `${ey - EY}px`;
+
+                        img2.querySelector('img').style.left = `${ex - EX}px`;
+                        img2.querySelector('img').style.top = `${ey - EY}px`;
+
+                        img3.querySelector('img').style.left = `${ex - EX}px`;
+                        img3.querySelector('img').style.top = `${ey - EY}px`;
+                    }
+                })
+            });
+
             document.querySelector('.services__list').addEventListener('mouseleave', () => {
                 decorImgs.forEach(img => {
                     img.style.display = 'none';
+                    img.querySelector('img').removeAttribute('style');
                 });
             });
         });
@@ -171,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.area__slider.swiper')) {
         const areaSlider = new Swiper('.area__slider.swiper', {
             direction: 'horizontal',
-            loop: true,
             speed: 1000,
             spaceBetween: 70,
             pagination: {
@@ -189,20 +212,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (document.querySelector('.specialists__slider')) {
-        // swiper.on('slideChange', function (index) {
-        // 
-        // });
-
         const content = document.querySelector('.specialists__content');
         const heading = document.querySelector('.specialists__heading');
+
+        const swiperSpec = new Swiper('.swiper.specialists__slider', {
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 1,
+            speed: 400,
+            spaceBetween: 350,
+            grabCursor: true,
+            pagination: {
+                el: '.specialists__pagination',
+                clickable: true,
+            },
+            on: {
+                init: function() {
+                    document.querySelector('.specialists__pagination .swiper-pagination-bullet').textContent = 1;
+                }
+            }
+        });
+
+        swiperSpec.on('slideChange', function(slider) {
+            if (slider.snapIndex > 0) {
+                content.style.opacity = 0;
+            } else {
+                content.style.opacity = 1;
+            }
+
+            const paginationItems = document.querySelectorAll('.specialists__pagination .swiper-pagination-bullet');
+
+            paginationItems.forEach(item => {
+                if (item.classList.contains('swiper-pagination-bullet-active')) {
+                    item.textContent = slider.snapIndex + 1;
+                } else {
+                    item.textContent = '';
+                }
+            });
+        });
 
         function setLeft(setElem, example) {
             setElem.style.left = `${example.getBoundingClientRect().left}px`;
         }
 
         setLeft(content, heading);
+        swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
 
-        window.addEventListener('resize', setLeft(content, heading));
+        window.addEventListener('resize', () => {
+            setLeft(content, heading);
+            swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
+        });
     }
 
     if (document.querySelector('.swiper.blog__slider')) {
@@ -238,10 +297,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         bg.addEventListener('click', () => {
             map.classList.toggle('active');
+            bg.classList.toggle('active');
+
             if (map.classList.contains('active')) {
                 map.style.transform = 'translateX(0)';
+                btn.textContent = btn.dataset.show;
+                btn.style.transform = `rotate(-90deg) translateY(-60px)`;
             } else {
                 map.removeAttribute('style');
+                btn.textContent = btn.dataset.hide;
+                btn.removeAttribute('style');
             }
         });
     }
