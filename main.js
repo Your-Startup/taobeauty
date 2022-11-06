@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             accordionsServices.forEach(acc => {
                 acc.addEventListener('mousemove', function(e) {
+                    // if (e.target.classList.contains('accordion__heading')) {
                     EX = e.x;
                     EY = e.y;
 
@@ -148,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     img3.querySelector('img').style.left = `${ex - EX}px`;
                     img3.querySelector('img').style.top = `${ey - EY}px`;
+                    // }
                 })
             });
 
@@ -235,12 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 init: function() {
                     document.querySelector('.specialists__pagination .swiper-pagination-bullet').textContent = 1;
                 }
-            },
-            breakpoints: {
-                1700: {
-                    spaceBetween: 450,
-                    slidesPerView: .9,
-                }
             }
         });
 
@@ -266,16 +262,14 @@ document.addEventListener('DOMContentLoaded', () => {
             setElem.style.left = `${example.getBoundingClientRect().left}px`;
         }
 
-        function setRight(setElem, example) {
-            setElem.style.right = `${example.getBoundingClientRect().right}px`;
-        }
+        const leftEl = document.querySelector('.specialists__left');
+        const rightEl = document.querySelector('.specialists__right');
 
-        // const leftEl = document.querySelector('.specialists__left');
-        // const rightEl = document.querySelector('.specialists__right');
+        setLeft(left, heading);
 
-        // leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
+        leftEl.style.left = `${heading.getBoundingClientRect().left - left.getBoundingClientRect().width}px`;
 
-        // rightEl.style.right = `${heading.getBoundingClientRect().left}px`
+        rightEl.style.right = `${heading.getBoundingClientRect().right}px`
 
         setLeft(content, heading);
         swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
@@ -283,8 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
             setLeft(content, heading);
             swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
-            // leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
-            // rightEl.style.right = `${heading.getBoundingClientRect().left}px`
+            leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
+            rightEl.style.right = `${heading.getBoundingClientRect().left}px`
         });
     }
 
@@ -319,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.querySelector('.contacts__btn');
         const map = document.querySelector('#contacts-map');
 
-        btn.style.width = `${bg.getBoundingClientRect().height}px`
+        btn.style.width = `${bg.getBoundingClientRect().height}px`;
 
         bg.addEventListener('click', () => {
             map.classList.toggle('active');
