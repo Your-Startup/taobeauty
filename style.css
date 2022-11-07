@@ -435,7 +435,8 @@ header {
     position: absolute;
     z-index: 1;
     opacity: 0;
-    transition: opacity .8s linear;
+    transform: scale(0);
+    transition: all .8s linear;
 }
 
 
@@ -853,7 +854,7 @@ header {
     max-width: 550px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 60px;
     transition: opacity .4s linear;
     pointer-events: none;
 }
@@ -882,7 +883,12 @@ header {
     overflow: visible;
     max-width: 700px;
     margin-right: auto;
+    margin-left: 0;
     height: auto;
+}
+
+.specialists__wrap .container {
+    position: relative;
 }
 
 .specialists__slider .swiper-slide:not(.specialists__slider.swiper-slide:first-child) {
@@ -923,11 +929,11 @@ header {
 }
 
 .specialists__left {
-    left: 15%;
+    left: -20px;
 }
 
 .specialists__right {
-    right: 25%;
+    right: 45px;
 }
 
 .specialists__slider .swiper-slide.swiper-slide-active .specialists__block,

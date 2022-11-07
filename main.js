@@ -72,12 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 ey = e.clientY;
 
                 decorImgs.forEach(img => {
-                    img.style.opacity = 1;
+                    img.style.opacity = 0;
+                    img.style.transform = `scale(0)`
                 });
 
-                img1.querySelector('img').src = this.dataset.imgone;
-                img2.querySelector('img').src = this.dataset.imgtwo;
-                img3.querySelector('img').src = this.dataset.imgthree;
+                setTimeout(() => {
+                    img1.querySelector('img').src = this.dataset.imgone;
+                    img2.querySelector('img').src = this.dataset.imgtwo;
+                    img3.querySelector('img').src = this.dataset.imgthree;
+
+                    decorImgs.forEach(img => {
+                        img.style.opacity = 1;
+                        img.style.transform = `scale(1)`
+                    });
+                }, 400);
 
                 if (this.classList.contains('block-1')) {
                     img1.style.left = 0;
@@ -156,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.services__list').addEventListener('mouseleave', () => {
                 decorImgs.forEach(img => {
                     img.style.opacity = 0;
+                    img.style.transform = null
                     img.querySelector('img').removeAttribute('style');
                 });
             });
@@ -237,6 +246,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 init: function() {
                     document.querySelector('.specialists__pagination .swiper-pagination-bullet').textContent = 1;
                 }
+            },
+            breakpoints: {
+                1441: {
+                    slidesPerView: 1,
+                    spaceBetween: 350,
+                }
             }
         });
 
@@ -262,23 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setElem.style.left = `${example.getBoundingClientRect().left}px`;
         }
 
-        const leftEl = document.querySelector('.specialists__left');
-        const rightEl = document.querySelector('.specialists__right');
-
-        setLeft(left, heading);
-
-        leftEl.style.left = `${heading.getBoundingClientRect().left - left.getBoundingClientRect().width}px`;
-
-        rightEl.style.right = `${heading.getBoundingClientRect().right}px`
-
         setLeft(content, heading);
-        swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
 
         window.addEventListener('resize', () => {
             setLeft(content, heading);
-            swiperSpec.$el[0].style.marginLeft = `${heading.getBoundingClientRect().left}px`;
-            leftEl.style.left = `${heading.getBoundingClientRect().left - 64}px`;
-            rightEl.style.right = `${heading.getBoundingClientRect().left}px`
         });
     }
 
