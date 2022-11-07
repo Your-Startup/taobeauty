@@ -147,7 +147,12 @@ function taobeauty_scripts() {
 
 	// TODO: include base.js
 
-	$pagename = get_post_field( 'post_name', get_post() );
+	global $post;
+	$pagename = $post->post_name;
+
+	if (is_single()) {
+		$pagename = $post->post_type;
+	}
 
 	if ($pagename == 'home') {
 		wp_enqueue_style( 'taobeauty-swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), _S_VERSION );
@@ -156,8 +161,6 @@ function taobeauty_scripts() {
 		wp_enqueue_script('your-startup-script-swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), _S_VERSION);
 	}
 	
-	error_log(file_exists(get_template_directory() . '/assets/css/' . $pagename . '.css'));
-
 	if (file_exists(get_template_directory() . '/assets/css/' . $pagename . '.css')) {
 		wp_enqueue_style( 'your-startup-style-' . $pagename, get_template_directory_uri() . '/assets/css/' . $pagename . '.css', array(), _S_VERSION );
 		wp_style_add_data( 'your-startup-style-' . $pagename, 'rtl', 'replace' );
@@ -169,10 +172,16 @@ function taobeauty_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'taobeauty_scripts' );
 
-function url_exists($url){
-	$headers=get_headers($url);
-	return stripos($headers[0],"200 OK")?true:false;
+function add_type_attribute($tag, $handle, $src) {
+    // if not your script, do nothing and return original $tag
+    /*if ( 'your-startup-script-base' !== $handle ) {
+        return $tag;
+    }*/
+    // change the script tag by adding type="module" and return it.
+    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+    return $tag;
 }
+add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
 
 /**
  * Implement the Custom Header feature.
@@ -193,6 +202,16 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+* Custom posts.
+*/
+require get_template_directory() . '/inc/custom-posts.php';
+
+/**
+* Helper.
+*/
+require get_template_directory() . '/inc/helper.php';
 
 /**
  * Load Jetpack compatibility file.

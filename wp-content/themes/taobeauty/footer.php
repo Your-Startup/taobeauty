@@ -11,40 +11,77 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'taobeauty' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'taobeauty' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'taobeauty' ), 'taobeauty', '<a href="https://your-startup.space/">Your Startup</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="">
+                            Сертификаты
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            До и после
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Оборудование
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Документы
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Блог
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__socials">
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="<?= get_template_directory_uri() ?>/assets/img/whatsapp.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="<?= get_template_directory_uri() ?>/assets/img/tg.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="<?= get_template_directory_uri() ?>/assets/img/vk.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__content">
+                <div class="footer__flex">
+                    <div class="footer__text">
+                        <a class="footer__contact" href="tel:+74950211295">+ 7 (495) 021-12-95</a>
+                        <a class="footer__contact" href="mailto:info@tao-beauty.ru">info@tao-beauty.ru</a>
+                        <div class="footer__address">
+                            Москва, 125047, ул. Большая Садовая, 5к1
+                            <br> Вход со стороны улицы Гашека
+                            <br> Ежедневно: 10:00–22:00
+                        </div>
+                    </div>
+                    <div class="footer__privacy">
+                        <a class="footer__link" href="">Политика конфиденциальности</a>
+                        <a class="footer__link" href="">Карточка организации</a>
+                    </div>
+                </div>
+                <a class="footer__qr" href="">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/qr.png" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
 </div><!-- #page -->
-
-<ul class="social__list">
-	<li class="social__item">
-		<a href="#">
-			<img src="<?= get_template_directory_uri() ?>/assets/img/vk.svg" alt="">
-		</a>
-	</li>
-	<li class="social__item">
-		<a href="#">
-			<img src="<?= get_template_directory_uri() ?>/assets/img/tg.svg" alt="">
-		</a>
-	</li>
-	<li class="social__item">
-		<a href="#">
-			<img src="<?= get_template_directory_uri() ?>/assets/img/whatsapp.svg" alt="">
-		</a>
-	</li>
-</ul>
 
 <?php wp_footer(); ?>
 

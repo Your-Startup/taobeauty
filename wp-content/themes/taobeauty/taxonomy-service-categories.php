@@ -16,11 +16,15 @@ get_header();
 ?>
 <main id="primary" class="site-main">
 	<?php
-		
-		$template_part = get_template_part( 'template-parts/pages/content', $post->post_name );
+		$taxonomy = get_queried_object();
+        $template_part = false;
 
-		if ($template_part === false) {
-			get_template_part( 'template-parts/pages/content', 'default' );
+        if ($taxonomy->parent === 0) {
+            $template_part = get_template_part( 'template-parts/taxonomes/content', 'is-parent' );
+        }
+		
+        if ($template_part === false) {
+			get_template_part( 'template-parts/taxonomes/content', 'default' );
 		}
 	?>
 </main><!-- #main -->
