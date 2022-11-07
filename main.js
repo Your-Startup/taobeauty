@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         img.style.opacity = 1;
                         img.style.transform = `scale(1)`
                     });
-                }, 400);
+                }, 200);
 
                 if (this.classList.contains('block-1')) {
                     img1.style.left = 0;
@@ -163,9 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             document.querySelector('.services__list').addEventListener('mouseleave', () => {
                 decorImgs.forEach(img => {
-                    img.style.opacity = 0;
-                    img.style.transform = null
-                    img.querySelector('img').removeAttribute('style');
+                    setTimeout(() => {
+                        img.style.opacity = 0;
+                        img.style.transform = null
+                        img.querySelector('img').removeAttribute('style');
+                    }, 200);
                 });
             });
         });
