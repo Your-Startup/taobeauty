@@ -1749,10 +1749,10 @@ header {
     .specialists__right {
         right: 20%;
     }
-    /* .blog-prev {
-        left: -20px;
+    .blog-prev {
+        left: calc(-5% - 20px);
     }
-    .blog-next {
+    /* .blog-next {
         right: -20px;
     } */
     .blog__slider {
