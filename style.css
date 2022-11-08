@@ -796,6 +796,8 @@ header {
 .area {
     position: relative;
     padding-top: 75px;
+    background-image: url('./img/area.png');
+    background-size: 100% 75px;
 }
 
 .area__wrap {
