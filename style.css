@@ -16,7 +16,7 @@
 .container {
     width: 100%;
     max-width: 1140px;
-    padding: 0 20px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -600,8 +600,7 @@ header {
 }
 
 .prices__priceitem {
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding: 5px 0 3px;
     width: 550px;
     display: flex;
     align-items: center;
@@ -629,7 +628,7 @@ header {
     line-height: 226.5%;
     letter-spacing: 0.155em;
     text-transform: uppercase;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
 .prices__btn {
@@ -1165,7 +1164,6 @@ header {
 .contacts {
     position: relative;
     border-top: 1px solid #B48956;
-    border-bottom: 1px solid #B48956;
 }
 
 .contacts .container {
@@ -1351,7 +1349,7 @@ header {
     position: relative;
     padding-top: 60px;
     background-color: #476B7A;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .footer__nav {
@@ -1431,12 +1429,9 @@ header {
     }
 }
 
-@media (min-width: 1680px) {
+@media (min-width: 1630px) {
     .specialists__slider {
         max-width: 800px;
-    }
-    .specialists__slider .swiper-slide img {
-        width: 100%;
     }
     .specialists__right {
         right: -16px;

@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             accordionsServices.forEach(acc => {
                 acc.addEventListener('mousemove', function(e) {
-                    // if (e.target.classList.contains('accordion__heading')) {
                     EX = e.x;
                     EY = e.y;
 
@@ -157,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     img3.querySelector('img').style.left = `${ex - EX}px`;
                     img3.querySelector('img').style.top = `${ey - EY}px`;
-                    // }
                 })
             });
 
@@ -207,6 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const areaSlider = new Swiper('.area__slider.swiper', {
             direction: 'horizontal',
             speed: 1000,
+            loop: true,
+            centeredSlides: true,
             spaceBetween: 70,
             pagination: {
                 el: '.area__pagination',
@@ -251,8 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             breakpoints: {
                 1441: {
-                    slidesPerView: 2,
-                    spaceBetween: 350,
+                    spaceBetween: 200,
                 },
                 1700: {
                     spaceBetween: 300
