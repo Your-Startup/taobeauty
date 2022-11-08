@@ -299,9 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.blog-next',
                 prevEl: '.blog-prev',
             },
-            autoplay: {
-                delay: 2000,
-            },
+            // autoplay: {
+            //     delay: 2000,
+            // },
         });
     }
 
