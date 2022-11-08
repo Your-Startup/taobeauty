@@ -796,8 +796,10 @@ header {
 .area {
     position: relative;
     padding-top: 75px;
-    background-image: url('./img/area.png');
-    background-size: 100% 75px;
+    background-image: url(./img/area.png);
+    background-size: auto 75px;
+    background-repeat-y: no-repeat;
+    background-position: top;
 }
 
 .area__wrap {
