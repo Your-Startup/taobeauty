@@ -808,7 +808,7 @@ header {
 
 .specialists {
     padding: 100px 0;
-    background-color: rgba(200, 152, 95, .9);
+    background-color: #C8985F;
 }
 
 .specialists .container {
@@ -915,7 +915,7 @@ header {
     border: 1px solid #B48956;
     padding: 40px 14px 40px 40px;
     position: relative;
-    left: -300px;
+    left: -250px;
     transition: left .4s linear;
 }
 
@@ -1017,6 +1017,15 @@ header {
     padding: 15px;
     padding-right: 145px;
     border: 1px solid #fff;
+    transition: background-color .4s linear;
+}
+
+.specialists__btn-link:hover {
+    background-color: rgba(71, 107, 122, 0.8);
+}
+
+.specialists__btn-link:active {
+    background-color: #476B7A;
 }
 
 .specialists__nav.swiper-button-disabled {
@@ -1077,7 +1086,10 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     transform: translateY(60px) !important;
-    transition: transform .4s linear;
+    transition: transform 1s linear;
+}
+
+.blog__slide a {
     text-decoration: none;
 }
 
@@ -1411,4 +1423,25 @@ header {
     line-height: 172.12%;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+@media (max-width: 1440px) {
+    .specialists__right {
+        right: 20%;
+    }
+}
+
+@media (min-width: 1680px) {
+    .specialists__slider {
+        max-width: 800px;
+    }
+    .specialists__slider .swiper-slide img {
+        width: 100%;
+    }
+    .specialists__right {
+        right: -16px;
+    }
+    .specialists__left {
+        left: -24px;
+    }
 }

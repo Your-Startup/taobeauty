@@ -231,15 +231,15 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: false,
             slidesPerView: 1,
             speed: 400,
-            spaceBetween: 250,
+            spaceBetween: 150,
             grabCursor: true,
             pagination: {
                 el: '.specialists__pagination',
                 clickable: true,
             },
-            // autoplay: {
-            //     delay: 2000,
-            // },
+            autoplay: {
+                delay: 2000,
+            },
             navigation: {
                 nextEl: '.specialists__right',
                 prevEl: '.specialists__left',
@@ -251,8 +251,11 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             breakpoints: {
                 1441: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     spaceBetween: 350,
+                },
+                1700: {
+                    spaceBetween: 300
                 }
             }
         });
@@ -291,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
             direction: 'horizontal',
             loop: false,
             speed: 1000,
+            grabCursor: true,
             spaceBetween: 170,
             navigation: {
                 nextEl: '.blog-next',
