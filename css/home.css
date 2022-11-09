@@ -609,7 +609,7 @@
 }
 
 .prices__priceitem {
-    padding: 5px 0 3px;
+    padding: 5px 0 3.85px;
     width: 550px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -643,6 +643,7 @@
     line-height: 226.5%;
     letter-spacing: 0.155em;
     text-transform: uppercase;
+    padding-right: 45px;
 }
 
 .prices__btn {
@@ -668,7 +669,7 @@
 .area {
     position: relative;
     padding-top: 75px;
-    background-image: url(./img/area.png);
+    background-image: url(../img/area.png);
     background-size: auto 75px;
     background-repeat-y: no-repeat;
     background-position: top;
@@ -808,7 +809,7 @@
 /* your */
 
 .your {
-    background-image: url(./img/your.jpg);
+    background-image: url(../img/your.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 150px 0 125px;
@@ -951,9 +952,9 @@
 
 .specialists__slider {
     overflow: visible;
-    max-width: 700px;
+    max-width: 690px;
     margin-right: auto;
-    margin-left: 0;
+    margin-left: 100px;
     height: auto;
 }
 
@@ -1015,11 +1016,11 @@
 }
 
 .specialists__left {
-    left: -20px;
+    left: calc(-10% + 5px);
 }
 
 .specialists__right {
-    right: 45px;
+    right: 11%;
 }
 
 .specialists__slider .swiper-slide.swiper-slide-active .specialists__block,
@@ -1136,6 +1137,7 @@
 
 .specialists__nav.swiper-button-disabled {
     opacity: 0;
+    pointer-events: none;
 }
 
 
@@ -1282,7 +1284,7 @@
 }
 
 .blog-prev {
-    left: -10%;
+    left: -15%;
 }
 
 .blog-next {
@@ -1404,19 +1406,21 @@
 }
 
 .contacts__label input {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 140.62%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    color: #000000;
     border: 1px solid #B48956;
     min-height: 50px;
     padding: 15px 20px;
 }
 
 .form-submit {
+    cursor: pointer;
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1428,6 +1432,18 @@
     padding: 15px 20px;
     border: 1px solid #B48956;
     background-color: transparent;
+    transition: color .4s linear, background-color .4s linear;
+}
+
+.form-submit:hover {
+    color: #fff;
+    background-color: #B48956;
+}
+
+.form-submit:active {
+    color: #fff;
+    border-color: #476B7A;
+    background-color: #476B7A;
 }
 
 .contacts__map {
@@ -1471,6 +1487,7 @@
 }
 
 .contacts__bg {
+    overflow: hidden;
     cursor: pointer;
     z-index: 2;
     position: absolute;
@@ -1512,14 +1529,14 @@
 }
 
 @media (max-width: 1440px) {
-    .specialists__right {
-        right: 20%;
-    }
     .blog-prev {
         left: calc(-5% - 20px);
     }
-    .blog__slider {
-        padding-right: 0;
+    .specialists__left {
+        left: -7%;
+    }
+    .specialists__slider {
+        margin-left: 100px;
     }
 }
 
@@ -1528,9 +1545,9 @@
         max-width: 800px;
     }
     .specialists__right {
-        right: -16px;
+        right: -1%;
     }
     .specialists__left {
-        left: -24px;
+        left: -10%;
     }
 }

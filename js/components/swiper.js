@@ -52,15 +52,15 @@ export function specialistsSlider() {
             loop: false,
             slidesPerView: 1,
             speed: 400,
-            spaceBetween: 250,
+            spaceBetween: 175,
             grabCursor: true,
             pagination: {
                 el: '.specialists__pagination',
                 clickable: true,
             },
-            // autoplay: {
-            //     delay: 2000,
-            // },
+            autoplay: {
+                delay: 2000,
+            },
             navigation: {
                 nextEl: '.specialists__right',
                 prevEl: '.specialists__left',
@@ -72,8 +72,7 @@ export function specialistsSlider() {
             },
             breakpoints: {
                 1441: {
-                    slidesPerView: 1,
-                    spaceBetween: 350,
+                    spaceBetween: 200,
                 }
             }
         });
