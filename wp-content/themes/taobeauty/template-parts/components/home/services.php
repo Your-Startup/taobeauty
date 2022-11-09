@@ -1,29 +1,24 @@
 <?php  $categories = getAllCategories(); ?>
-<pre>
-    <?php var_dump($categories);?>
-</pre>
 <?php if ($categories) : ?>
     <section class="services">
+        <div class="services__imgs-container">
+            <div class="services__imgs-wrapper">
+                <?php foreach ($categories as $category_key => $category) : ?>
+                    <?php $imgs = get_field('home_imgs', 'service-categories_' . $category->cat_ID ); ?>
+                    <?php if ($imgs) : ?>
+                        <?php foreach ($imgs as $img) : ?>
+                            <div class="services__decor-img img-group-<?= $category_key ?>"
+                                data-top="<?= $img['coord']['top'] ?>" 
+                                <?php echo $img['coord']['is_left'] ? 'data-left="' . $img['coord']['left'] . '"' : 'data-right="' .  $img['coord']['right']  . '"'; ?>>
+                                    <img src="<?= $img['img'] ?>" alt="">
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+        </div>
         <div class="container">
             <div class="services__wrap">
-                <div class="services__imgs-container">
-                    <?php foreach ($categories as $category_key => $category) : ?>
-                        <?php $imgs = get_field('home_imgs', 'service-categories_' . $category->cat_ID ); ?>
-                        <?php if ($imgs) : ?>
-                            <?php foreach ($imgs as $img) : ?>
-                                <div class="services__decor-img img-group-<?= $category_key ?>">
-                                    <img 
-                                        src="<?= $img['img'] ?>" 
-                                        alt="" 
-                                        data-top="<?= $img['img'] ?>" 
-                                        <?php echo $img['coord']['is_left'] ? 'data-left="' . $img['coord']['left'] . '"' : 'data-right="' .  $img['coord']['right']  . '"'; ?>
-                                    >
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </div>
-
                 <img src="<?= get_template_directory_uri() ?>/assets/img/services.svg" class="services-img" alt="">
                 <h4 class="services__heading">Услуги</h4>
                 <ul class="services__list">

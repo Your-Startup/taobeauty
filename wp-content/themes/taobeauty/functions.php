@@ -145,7 +145,7 @@ function taobeauty_scripts() {
 	wp_enqueue_style( 'taobeauty-base-style', get_template_directory_uri() . '/assets/css/base.css', array(), _S_VERSION );
 	wp_style_add_data( 'taobeauty-base-style', 'rtl', 'replace' );
 
-	// TODO: include base.js
+	wp_enqueue_script('taobeauty-script-base', get_template_directory_uri() . '/assets/js/base.js', array(), _S_VERSION);
 
 	global $post;
 	$pagename = $post->post_name;
@@ -158,25 +158,31 @@ function taobeauty_scripts() {
 		wp_enqueue_style( 'taobeauty-swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), _S_VERSION );
 		wp_style_add_data( 'taobeauty-swiper-style', 'rtl', 'replace' );
 
-		wp_enqueue_script('your-startup-script-swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), _S_VERSION);
+		wp_enqueue_script('taobeauty-script-swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), _S_VERSION);
 	}
 	
 	if (file_exists(get_template_directory() . '/assets/css/' . $pagename . '.css')) {
-		wp_enqueue_style( 'your-startup-style-' . $pagename, get_template_directory_uri() . '/assets/css/' . $pagename . '.css', array(), _S_VERSION );
-		wp_style_add_data( 'your-startup-style-' . $pagename, 'rtl', 'replace' );
+		wp_enqueue_style( 'taobeauty-style-' . $pagename, get_template_directory_uri() . '/assets/css/' . $pagename . '.css', array(), _S_VERSION );
+		wp_style_add_data( 'taobeauty-style-' . $pagename, 'rtl', 'replace' );
 	}
 
 	if (file_exists(get_template_directory() . '/assets/js/' . $pagename . '.js')) {
-		wp_enqueue_script('your-startup-script-' . $pagename, get_template_directory_uri() . '/assets/js/' . $pagename . '.js', array(), _S_VERSION);
+		wp_enqueue_script('taobeauty-script-' . $pagename, get_template_directory_uri() . '/assets/js/' . $pagename . '.js', array(), _S_VERSION);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'taobeauty_scripts' );
 
 function add_type_attribute($tag, $handle, $src) {
-    // if not your script, do nothing and return original $tag
-    /*if ( 'your-startup-script-base' !== $handle ) {
+    global $post;
+	$pagename = $post->post_name;
+
+	if (is_single()) {
+		$pagename = $post->post_type;
+	}
+
+    if ( 'taobeauty-script-' . $pagename !== $handle ) {
         return $tag;
-    }*/
+    }
     // change the script tag by adding type="module" and return it.
     $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
     return $tag;

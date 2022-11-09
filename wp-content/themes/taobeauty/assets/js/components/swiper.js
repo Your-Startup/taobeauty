@@ -25,8 +25,10 @@ export function areaSlider() {
     if (document.querySelector('.area__slider.swiper')) {
         new Swiper('.area__slider.swiper', {
             direction: 'horizontal',
+            slidesPerView: 1,
             speed: 1000,
             spaceBetween: 70,
+            loop: true,
             pagination: {
                 el: '.area__pagination',
                 clickable: true,
@@ -34,9 +36,6 @@ export function areaSlider() {
             navigation: {
                 nextEl: '.area-next',
                 prevEl: '.area-prev',
-            },
-            autoplay: {
-                delay: 2000,
             },
         });
     }
@@ -46,64 +45,57 @@ export function specialistsSlider() {
     if (document.querySelector('.specialists__slider')) {
         const content = document.querySelector('.specialists__content');
         const heading = document.querySelector('.specialists__heading');
-    
+
         const swiperSpec = new Swiper('.swiper.specialists__slider', {
             direction: 'horizontal',
             loop: false,
             slidesPerView: 1,
-            speed: 400,
-            spaceBetween: 250,
-            grabCursor: true,
+            speed: 800,
+            width: 700,
+            spaceBetween: 175,
+            allowTouchMove: false,
+            grabCursor: false,
             pagination: {
                 el: '.specialists__pagination',
                 clickable: true,
             },
-            // autoplay: {
-            //     delay: 2000,
-            // },
             navigation: {
-                nextEl: '.specialists__right',
-                prevEl: '.specialists__left',
+                nextEl: '.specialists__left',
+                prevEl: '.specialists__right',
             },
             on: {
-                init: function () {
-                document.querySelector('.specialists__pagination .swiper-pagination-bullet').textContent = 1;
+                init: function() {
+                    document.querySelector('.specialists__pagination .swiper-pagination-bullet').textContent = 1;
                 }
             },
-            breakpoints: {
-                1441: {
-                    slidesPerView: 1,
-                    spaceBetween: 350,
-                }
-            }
         });
-    
-        swiperSpec.on('slideChange', function (slider) {
-          if (slider.snapIndex > 0) {
-            content.style.opacity = 0;
-          } else {
-            content.style.opacity = 1;
-          }
-    
-          const paginationItems = document.querySelectorAll('.specialists__pagination .swiper-pagination-bullet');
-    
-          paginationItems.forEach(item => {
-            if (item.classList.contains('swiper-pagination-bullet-active')) {
-              item.textContent = slider.snapIndex + 1;
+
+        swiperSpec.on('slideChange', function(slider) {
+            if (slider.snapIndex > 0) {
+                content.style.opacity = 0;
             } else {
-              item.textContent = '';
+                content.style.opacity = 1;
             }
-          });
+
+            const paginationItems = document.querySelectorAll('.specialists__pagination .swiper-pagination-bullet');
+
+            paginationItems.forEach(item => {
+                if (item.classList.contains('swiper-pagination-bullet-active')) {
+                    item.textContent = slider.snapIndex + 1;
+                } else {
+                    item.textContent = '';
+                }
+            });
         });
-    
+
         function setLeft(setElem, example) {
-          setElem.style.left = `${example.getBoundingClientRect().left}px`;
+            setElem.style.left = `${example.getBoundingClientRect().left}px`;
         }
-    
+
         setLeft(content, heading);
-    
+
         window.addEventListener('resize', () => {
-          setLeft(content, heading);
+            setLeft(content, heading);
         });
     }
 }
@@ -118,9 +110,6 @@ export function blogSlider() {
             navigation: {
                 nextEl: '.blog-next',
                 prevEl: '.blog-prev',
-            },
-            autoplay: {
-                delay: 2000,
             },
         });
     }

@@ -4,13 +4,15 @@ function getAllCategories()
     $categories = get_categories([
         'taxonomy'     => 'service-categories',
         'type'         => 'post',
-        'orderby'      => 'name',
+        'meta_key'     => 'order',
+        'orderby'      => 'meta_value',
         'order'        => 'ASC',
         'parent'       => 0,
         'hide_empty'   => 0,
         'hierarchical' => 1,
         'number'       => 0,
         'pad_counts'   => false,
+        
     ]);
 
     if ($categories) {

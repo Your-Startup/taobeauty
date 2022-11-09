@@ -1,14 +1,9 @@
 <section class="area">
-    <img src="<?= get_template_directory_uri() ?>/assets/img/area.svg" alt="" class="area__svg">
     <div class="area__wrap">
         <div class="container">
             <h2 class="area__heading">
-                <span>
-                    TAO
-                </span>
-                <span>
-                    пространство
-                </span>
+                <span>TAO</span>
+                <span>пространство</span>
             </h2>
         </div>
         <div class="area__slider-wrap">
@@ -21,10 +16,10 @@
                         <img src="<?= get_template_directory_uri() ?>/assets/img/slide2.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="<?= get_template_directory_uri() ?>/assets/img/slide2.jpg" alt="">
+                        <img src="<?= get_template_directory_uri() ?>/assets/img/slide1.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="<?= get_template_directory_uri() ?>/assets/img/slide1.jpg" alt="">
+                        <img src="<?= get_template_directory_uri() ?>/assets/img/slide2.jpg" alt="">
                     </div>
                 </div>
                 <div class="container">

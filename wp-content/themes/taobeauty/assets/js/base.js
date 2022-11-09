@@ -1,0 +1,1 @@
+console.log('taobeauty-script-base');

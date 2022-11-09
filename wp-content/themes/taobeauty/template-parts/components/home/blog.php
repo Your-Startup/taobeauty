@@ -7,8 +7,8 @@
         </h2>
         <div class="swiper blog__slider">
             <div class="swiper-wrapper">
-                <a href="#" class="swiper-slide blog__slide">
-                    <div class="blog__item">
+                <div class="swiper-slide blog__slide">
+                    <a href="#" class="blog__item">
                         <div class="blog__img">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/blog1.jpg" alt="">
                         </div>
@@ -18,8 +18,8 @@
                         <div class="blog__text">
                             Вросший ноготь ― это и некрасиво, и больно, и опасно.
                         </div>
-                    </div>
-                    <div class="blog__item">
+                    </a>
+                    <a href="#" class="blog__item">
                         <div class="blog__img">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/blog2.jpg" alt="">
                         </div>
@@ -29,10 +29,10 @@
                         <div class="blog__text">
                             Короткое описание к статье.
                         </div>
-                    </div>
-                </a>
-                <a href="#" class="swiper-slide blog__slide">
-                    <div class="blog__item">
+                    </a>
+                </div>
+                <div class="swiper-slide blog__slide">
+                    <a href="#" class="blog__item">
                         <div class="blog__img">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/blog1.jpg" alt="">
                         </div>
@@ -42,8 +42,8 @@
                         <div class="blog__text">
                             Вросший ноготь ― это и некрасиво, и больно, и опасно.
                         </div>
-                    </div>
-                    <div class="blog__item">
+                    </a>
+                    <a href="#" class="blog__item">
                         <div class="blog__img">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/blog2.jpg" alt="">
                         </div>
@@ -53,10 +53,10 @@
                         <div class="blog__text">
                             Короткое описание к статье.
                         </div>
-                    </div>
-                </a>
-                <a href="#" class="swiper-slide blog__slide">
-                    <div class="blog__item">
+                    </a>
+                </div>
+                <div class="swiper-slide blog__slide">
+                    <a href="#" class="blog__item">
                         <div class="blog__img">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/blog1.jpg" alt="">
                         </div>
@@ -66,8 +66,8 @@
                         <div class="blog__text">
                             Вросший ноготь ― это и некрасиво, и больно, и опасно.
                         </div>
-                    </div>
-                    <div class="blog__item">
+                    </a>
+                    <a href="#" class="blog__item">
                         <div class="blog__img">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/blog2.jpg" alt="">
                         </div>
@@ -77,8 +77,8 @@
                         <div class="blog__text">
                             Короткое описание к статье.
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="blog__btn blog-prev">
