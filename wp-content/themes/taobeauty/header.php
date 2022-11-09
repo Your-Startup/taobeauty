@@ -32,14 +32,16 @@
 				<div class="header__link">
 					<?php the_custom_logo(); ?>
 				</div><!-- .site-branding -->
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
+				<div class="nav-wrapper">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</div>
 			</nav><!-- #site-navigation -->
 		</div>	
 	</header><!-- #masthead -->

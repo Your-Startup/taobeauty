@@ -667,7 +667,7 @@
 }
 
 .area__wrap {
-    padding: 100px 0 120px;
+    padding: 95px 0 120px;
     background-color: #476B7A;
 }
 
@@ -685,14 +685,14 @@
 }
 
 .area__heading {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .area__heading span:nth-child(1) {
     font-family: 'Alethia Pro', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 92px;
+    font-size: 96px;
     line-height: 140.62%;
     text-transform: uppercase;
     color: #B48956;
@@ -703,7 +703,7 @@
     font-family: 'Alethia Pro', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 65px;
+    font-size: 64px;
     line-height: 140.62%;
     text-transform: uppercase;
     color: #B48956;
@@ -748,7 +748,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 0 10px;
+    gap: 0 22px;
     margin-top: 50px;
 }
 
@@ -757,6 +757,7 @@
     width: 6px;
     height: 6px;
     background-color: #B48956;
+    margin: 0 !important;
 }
 
 .area .swiper-pagination-bullet-active {
@@ -861,7 +862,7 @@
 /* specialists */
 
 .specialists {
-    padding: 100px 0;
+    padding: 96px 0 98px;
     background-color: #C8985F;
 }
 
@@ -877,7 +878,7 @@
     font-family: 'Alethia Pro', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 92px;
+    font-size: 96px;
     line-height: 140.62%;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -888,7 +889,7 @@
 }
 
 .specialists__heading span:nth-child(2) {
-    font-size: 65px;
+    font-size: 64px;
 }
 
 .specialists__wrap {
@@ -1080,7 +1081,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 0 20px;
+    gap: 0 22px;
 }
 
 .specialists__pagination .swiper-pagination-bullet {
@@ -1105,6 +1106,9 @@
     -webkit-transition: all .4s linear;
     -o-transition: all .4s linear;
     transition: all .4s linear;
+    margin: 0 !important;
+    height: 6px;
+    width: 6px;
 }
 
 .specialists__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -1187,7 +1191,7 @@
     padding-bottom: 3px;
     border-bottom: 1px solid #B48956;
     padding-right: 45px;
-    margin-right: 95px;
+    margin-right: 110px;
 }
 
 .blog__slider {
@@ -1272,6 +1276,7 @@
     line-height: 172.12%;
     color: #000000;
     margin-top: auto;
+    max-width: 360px;
 }
 
 .blog__btn {

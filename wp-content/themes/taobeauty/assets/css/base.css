@@ -82,6 +82,13 @@ header {
     justify-content: space-between;
 }
 
+.nav-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
@@ -92,7 +99,7 @@ header {
 }
 
 .menu-item{
-    margin-right: 40px;
+    margin-right: 48px;
 }
 
 .menu-item:last-child {
