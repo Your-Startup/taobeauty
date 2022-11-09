@@ -171,26 +171,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (document.querySelector('.accordion')) {
-        const accordionsPrices = document.querySelectorAll('.accordion');
-
-        accordionsPrices.forEach(accordion => {
-            const heading = accordion.querySelector(".accordion__heading");
-            const content = accordion.querySelector(".accordion__content");
-
-            heading.onclick = () => {
-                if (content.style.maxHeight) {
-                    closeAccordion(accordion);
-                    accordion.parentElement.classList.remove('opend')
+    const accordionsPrices = document.querySelectorAll('.accordion');
+    if (accordionsPrices) {
+        const accordions = new Accordions(accordionsPrices);
+        accordions.items.forEach(accordion => {
+            accordion.heading.onclick = () => {
+                if (accordion.content.style.maxHeight) {
+                    accordion.close();
+                    accordion.selector.parentElement.classList.remove('opend');
                 } else {
-                    accordionsPrices.forEach((accordion) => {
-                        closeAccordion(accordion);
-                        accordion.parentElement.classList.remove('opend');
+                    accordions.closeAll();
+                    accordions.items.forEach(accordion => {
+                        accordion.selector.parentElement.classList.remove('opend');
                     });
-                    openAccordion(accordion);
-                    accordion.parentElement.classList.add('opend')
+                    accordion.open();
+                    accordion.selector.parentElement.classList.add('opend');
                 }
             };
+
+            const close_btn = accordion.selector.querySelector('.accordion__close-btn');
+            if (close_btn) {
+                close_btn.addEventListener('click', () => {
+                    accordion.close();
+                    accordion.selector.parentElement.classList.remove('opend');
+                });
+            }
         });
     }
 
