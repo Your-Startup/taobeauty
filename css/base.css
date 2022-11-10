@@ -294,3 +294,134 @@ header {
     color: #FFFFFF;
     text-decoration: none;
 }
+
+.breadcrumbs {
+    margin-top: 15px;
+    margin-bottom: 135px;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__item {
+    position: relative;
+    margin-right: 20px;
+}
+
+.breadcrumbs__item::after {
+    content: '-';
+    position: absolute;
+    top: 0;
+    right: -11px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 111.62%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B48956;
+}
+
+.breadcrumbs__item:last-child {
+    position: static;
+    margin-right: 0;
+}
+
+.breadcrumbs__item:last-child::after {
+    content: none;
+}
+
+.breadcrumbs__item,
+.breadcrumbs__item a {
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 111.62%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B48956;
+}
+
+.transp__btn-link {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140.62%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px;
+    padding-right: 145px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    -webkit-transition: background-color .4s linear;
+    -o-transition: background-color .4s linear;
+    transition: background-color .4s linear;
+}
+
+.yellow__btn-link {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140.62%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px;
+    padding-right: 145px;
+    border: 1px solid #fff;
+    background-color: #CAA172;
+    -webkit-transition: background-color .4s linear;
+    -o-transition: background-color .4s linear;
+    transition: background-color .4s linear;
+}
+
+.yellow__btn-link:hover,
+.transp__btn-link:hover {
+    background-color: rgba(71, 107, 122, 0.8);
+}
+
+.yellow__btn-link:active,
+.transp__btn-link:active {
+    background-color: #476B7A;
+}
+
+.border-btn {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140.62%;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    border-bottom: 1px solid;
+    padding-right: 45px;
+}
+
+
+/* accordion */
+
+.accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height .5s linear;
+    -o-transition: max-height .5s linear;
+    transition: max-height .5s linear;
+}
+
+.accordion__heading {
+    cursor: pointer;
+}

@@ -2,6 +2,7 @@ import { mainSlider, areaSlider, specialistsSlider, blogSlider } from './compone
 import initServices from './home/services.js';
 import initPrices from './home/prices.js';
 import initMap from './home/map.js';
+import initCosmetology from './cosmetology/accordion.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     mainSlider();
@@ -11,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initServices();
     initPrices();
     initMap();
+    initCosmetology();
 });
