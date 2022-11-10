@@ -29,7 +29,7 @@
                         <div class="specialists__nav specialists__left">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/slider-right.svg" alt="">
                         </div>
-                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist1.jpg" alt="">
+                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist1.png" alt="">
                         <div class="specialists__block">
                             <div class="specialists__name">
                                 Екатерина Приваткина
@@ -49,7 +49,7 @@
                         <div class="specialists__nav specialists__left">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/slider-right.svg" alt="">
                         </div>
-                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist2.jpg" alt="">
+                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist2.png" alt="">
                         <div class="specialists__block">
                             <div class="specialists__name">
                                 Екатерина Приваткина
@@ -69,7 +69,7 @@
                         <div class="specialists__nav specialists__left">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/slider-right.svg" alt="">
                         </div>
-                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist1.jpg" alt="">
+                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist1.png" alt="">
                         <div class="specialists__block">
                             <div class="specialists__name">
                                 Екатерина Приваткина
@@ -89,7 +89,7 @@
                         <div class="specialists__nav specialists__left">
                             <img src="<?= get_template_directory_uri() ?>/assets/img/slider-right.svg" alt="">
                         </div>
-                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist2.jpg" alt="">
+                        <img class="specialists__img" src="<?= get_template_directory_uri() ?>/assets/img/specialist2.png" alt="">
                         <div class="specialists__block">
                             <div class="specialists__name">
                                 Екатерина Приваткина

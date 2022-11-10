@@ -27,7 +27,7 @@
                             <div class="accordion__heading"><?= $category->name ?></div>
                             <div class="accordion__content">
                                 <?php if ($category->children) : ?>
-                                    <ul class="services__inner-list">
+                                    <ul class="services__inner-list" <?php echo $key == 3 ? 'style="max-width:750px;margin:0 auto;"' : ''; ?>>
                                         <?php foreach ($category->children as $key => $sub_category) : ?>
                                             <li class="services__inner-item">
                                                 <span><?= $key + 1 ?></span>
