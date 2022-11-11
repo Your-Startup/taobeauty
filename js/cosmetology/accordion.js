@@ -1,7 +1,7 @@
 import Accordions from "../components/accordion.js";
 
 export default function initCosmetology() {
-    const accordionsPrices = document.querySelectorAll('.accordion');
+    const accordionsPrices = document.querySelectorAll('.cosmetology__item.accordion');
 
     if (accordionsPrices) {
         const accordions = new Accordions(accordionsPrices);
@@ -23,13 +23,12 @@ export default function initCosmetology() {
             };
             accordion.selector.querySelector('.border-btn.cosmetology__link').onclick = function(e) {
                 e.preventDefault();
-                this.classList.toggle('active');
-                if (this.classList.contains('active')) {
-                    this.textContent = 'Скрыть';
-                    accordion.open();
-                } else {
+                if (accordion.selector.classList.contains('opend')) {
                     this.textContent = 'Подробнее';
                     accordion.close();
+                } else {
+                    this.textContent = 'Скрыть';
+                    accordion.open();
                 }
             }
         });
