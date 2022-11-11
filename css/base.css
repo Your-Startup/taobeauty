@@ -542,3 +542,34 @@ header {
     margin: 0 auto;
     display: block;
 }
+
+.main-text__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.main-text__content {
+    max-width: 550px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+}
+
+.main-text__content p {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main-text__content p:last-child {
+    margin-bottom: 0;
+}
