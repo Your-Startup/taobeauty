@@ -1,8 +1,8 @@
-.cosmetology {
+.category {
     margin-bottom: 290px;
 }
 
-.cosmetology__heading {
+.category__heading {
     font-family: 'Alethia Pro', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -15,24 +15,24 @@
     margin-left: -20px;
 }
 
-.cosmetology__list {
+.category__list {
     display: flex;
     flex-direction: column;
 }
 
-.cosmetology__item {
+.category__item {
     transition: background-color .4s linear;
 }
 
-.cosmetology__item .prices__pricelist {
+.category__item .prices__pricelist {
     padding-top: 135px;
 }
 
-.cosmetology__item .prices__priceitem:first-child {
+.category__item .prices__priceitem:first-child {
     border-top: none;
 }
 
-.cosmetology__item .container {
+.category__item .container {
     display: flex;
     position: relative;
     padding: 50px 0;
@@ -40,30 +40,30 @@
     transition: background-color .4s linear;
 }
 
-.cosmetology__item:last-child .container {
+.category__item:last-child .container {
     border-bottom: 1px solid #B48956;
 }
 
-.cosmetology__item .cosmetology__img {
+.category__item .category__img {
     display: flex;
     align-items: flex-start;
     margin-right: 30px;
     width: 258px;
 }
 
-.cosmetology__item .cosmetology__img img {
+.category__item .category__img img {
     object-fit: cover;
     display: block;
 }
 
-.cosmetology__counter {
+.category__counter {
     position: absolute;
     left: -70px;
     top: 160px;
     display: flex;
 }
 
-.cosmetology__number {
+.category__number {
     font-family: 'Jost', sans-serif;
     font-style: italic;
     font-weight: 400;
@@ -74,12 +74,12 @@
     position: relative;
 }
 
-.cosmetology__number:nth-child(1) {
+.category__number:nth-child(1) {
     color: #000;
     text-shadow: 0px 0px 1px #000;
 }
 
-.cosmetology__number:nth-child(1)::after {
+.category__number:nth-child(1)::after {
     font-family: 'Jost', sans-serif;
     font-style: italic;
     font-weight: 400;
@@ -93,11 +93,11 @@
     text-shadow: none;
 }
 
-.cosmetology__number:nth-child(2) {
+.category__number:nth-child(2) {
     color: #B48956;
 }
 
-.cosmetology__title {
+.category__title {
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -110,7 +110,7 @@
     max-width: 545px;
 }
 
-.cosmetology__text {
+.category__text {
     max-width: 545px;
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -120,31 +120,31 @@
     color: #000000;
 }
 
-.cosmetology__flex {
+.category__flex {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.cosmetology__flex .accordion__content,
-.cosmetology__flex .cosmetology__content {
+.category__flex .accordion__content,
+.category__flex .category__content {
     position: relative;
     left: -288px;
     margin-right: -288px;
 }
 
-.cosmetology__links {
+.category__links {
     display: flex;
     align-items: center;
     margin-top: auto;
 }
 
-.cosmetology__link {
+.category__link {
     background-color: #CAA172;
     margin-right: 30px;
 }
 
-.cosmetology__arr {
+.category__arr {
     cursor: pointer;
     position: absolute;
     right: 0;
@@ -155,7 +155,7 @@
     transition: transform .4s linear;
 }
 
-.cosmetology__links .border-btn {
+.category__links .border-btn {
     color: #CAA172;
     border-color: #CAA172;
     background-color: transparent;
@@ -217,35 +217,35 @@
     padding-right: 45px;
 }
 
-.cosmetology__item.opend {
+.category__item.opend {
     background-color: #f0e7dd;
     border-top: 1px solid #B48956;
 }
 
-.cosmetology__item.opend .container {
+.category__item.opend .container {
     border: none;
 }
 
-.cosmetology__item.opend+.cosmetology__item {
+.category__item.opend+.category__item {
     border-top: 1px solid #B48956;
 }
 
-.cosmetology__item.opend+.cosmetology__item .container {
+.category__item.opend+.category__item .container {
     border-top: none;
 }
 
-.cosmetology__item.opend .cosmetology__arr {
+.category__item.opend .category__arr {
     transform: translateY(calc(-50% + 10px)) rotate(180deg);
     top: auto;
     bottom: 70px;
 }
 
-.cosmetology__content {
+.category__content {
     display: flex;
     flex-direction: column;
 }
 
-.cosmetology__content-block {
+.category__content-block {
     margin-top: 170px;
     margin-bottom: 50px;
     border-top: 1px solid #B48956;
@@ -254,37 +254,41 @@
     flex-direction: column;
 }
 
-.cosmetology__content-block li:not(.cosmetology__images):not(.procedure__flex li) {
+.category__content-block li:not(.category__images):not(.procedure__flex li):not(.category__image) {
     padding-top: 10px;
 }
 
-.cosmetology__content-block li {
+.category__content-block li {
     border-top: 1px solid #B48956;
 }
 
-.cosmetology__content-block li:first-child {
+.category__content-block li:first-child {
     border-top: none;
 }
 
-.cosmetology__plus-flex {
+.category__plus-flex {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 0 30px;
 }
 
-.cosmetology__plus-list.fourth .cosmetology__plus {
+.category__plus-list.fourth .category__plus {
     width: calc(25% - 30px);
 }
 
-.cosmetology__plus {
+.category__plus-list.tripple .category__plus {
+    width: calc(33.3% - 30px);
+}
+
+.category__plus {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 80px;
 }
 
-.cosmetology__plus-heading {
+.category__plus-heading {
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -296,7 +300,7 @@
     margin-bottom: 50px;
 }
 
-.cosmetology__plus-text {
+.category__plus-text {
     margin-top: 20px;
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -306,48 +310,58 @@
     color: #000000;
 }
 
-.cosmetology__text-block .main-text__content {
+.category__text-block .main-text__content {
     max-width: 545px;
 }
 
-.cosmetology__text-block {
+.category__text-block {
     padding-bottom: 80px;
 }
 
-.cosmetology__images {
+.category__images {
     display: flex;
     gap: 0 30px;
     padding: 30px 0;
 }
 
-.cosmetology__images img {
+.category__image {
+    display: flex;
+    padding: 30px 0;
+}
+
+.category__image img {
+    display: block;
+    width: calc(100% - 30px);
+}
+
+.category__images img {
     display: block;
     width: calc(50% - 15px);
 }
 
-.cosmetology__prices {
+.category__prices {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding-bottom: 80px;
 }
 
-.cosmetology__prices .prices__pricelist {
+.category__prices .prices__pricelist {
     padding-top: 25px;
     margin-bottom: 0;
 }
 
-.cosmetology__prices .prices__pricelist .prices__priceitem {
+.category__prices .prices__pricelist .prices__priceitem {
     border-top: none !important;
 }
 
-.cosmetology__ordered-list {
+.category__ordered-list {
     display: flex;
     justify-content: space-between;
     padding-bottom: 80px;
 }
 
-.cosmetology__ordered-list ol,
+.category__ordered-list ol,
 .procedure__flex ol {
     width: 545px;
     display: flex;
@@ -355,7 +369,7 @@
     align-items: flex-start;
 }
 
-.cosmetology__ordered-list li,
+.category__ordered-list li,
 .procedure__flex ol li {
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -366,7 +380,7 @@
     border: none;
 }
 
-.cosmetology__procedure {
+.category__procedure {
     display: flex;
     justify-content: space-between;
     padding-bottom: 80px;
