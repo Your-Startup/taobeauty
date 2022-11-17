@@ -174,6 +174,9 @@ add_action( 'wp_enqueue_scripts', 'taobeauty_scripts' );
 
 function add_type_attribute($tag, $handle, $src) {
     global $post;
+	if (!$post) {
+		return $tag;
+	}
 	$pagename = $post->post_name;
 
 	if (is_single() || is_tax()) {
@@ -218,6 +221,11 @@ require get_template_directory() . '/inc/custom-posts.php';
 * Helper.
 */
 require get_template_directory() . '/inc/helper.php';
+
+/**
+* Custom blocks.
+*/
+require get_template_directory() . '/inc/custom-blocks.php';
 
 /**
  * Load Jetpack compatibility file.

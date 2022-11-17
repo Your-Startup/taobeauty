@@ -54,58 +54,17 @@
                                 <?= get_field('text', $service->ID) ?>
                             </div>
                             <div class="accordion__content">
-                                <ul class="prices__pricelist">
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                </ul>
+                                <?php $blocks = get_field('custom-blocks', $service->ID); ?>
+                                <?php if ($blocks) : ?>
+                                    <ul class="category__content-block">
+                                        <?php foreach ($blocks as $block) :
+                                            $type = $block['type'];
+                                            $data = $block[$type];
+                                            $customBlock = new CustomBlock($type, $data);
+                                            $customBlock->createBlock();
+                                        endforeach;?>
+                                    </ul>
+                                <?php endif;?>
                             </div>
                             <div class="category__links">
                                 <button class="yellow__btn-link category__link">Записаться</button>
