@@ -24,7 +24,8 @@
                 <ul class="services__list">
                     <?php foreach ($categories as $key => $category) : ?>
                         <li class="accordion__block" data-category="<?= $key ?>">
-                            <div class="accordion__heading"><?= $category->name ?></div>
+                            <? $short_name = get_field('short_name', 'service-categories_' . $category->cat_ID); ?>
+                            <div class="accordion__heading"><?= $short_name ? $short_name : $category->name ?></div>
                             <div class="accordion__content">
                                 <?php if ($category->children) : ?>
                                     <ul class="services__inner-list" <?php echo $key == 3 ? 'style="max-width:750px;margin:0 auto;"' : ''; ?>>

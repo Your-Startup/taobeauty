@@ -150,7 +150,7 @@ function taobeauty_scripts() {
 	global $post;
 	$pagename = $post->post_name;
 
-	if (is_single()) {
+	if (is_single() || is_tax()) {
 		$pagename = $post->post_type;
 	}
 
@@ -176,7 +176,7 @@ function add_type_attribute($tag, $handle, $src) {
     global $post;
 	$pagename = $post->post_name;
 
-	if (is_single()) {
+	if (is_single() || is_tax()) {
 		$pagename = $post->post_type;
 	}
 
