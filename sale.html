@@ -1,18 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/category.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <title>Cosmetology</title>
-</head>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/sale.css">
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <title>Cosmetology</title>
+
+    </head>
 
 <body>
     <header>
@@ -702,336 +705,52 @@
         </div>
     </header>
     <main class="main">
-        <section class="breadcrumbs">
+        <section class="sale">
             <div class="container">
-                <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__item">
-                        <a href="#">Услуги</a>
+                <h2 class="sale__heading">
+                    события <span>и</span> спецпредложения
+                </h2>
+                <ul class="sale__list">
+                    <li class="sale__item">
+                        <img src="./img/sale1.jpg" alt="">
+                        <div class="sale__date">2021.11.12</div>
+                        <h3 class="sale__title">Приглашаем именинников</h3>
+                        <div class="sale__text">
+                            15% в День Рождения! <br>
+                            Действует 7 дней до и 7 дней после!
+                        </div>
+                        <a href="#" class="sale__link yellow__btn-link js-ajax-link">Получить скидку</a>
                     </li>
-                    <li class="breadcrumbs__item">
-                        Косметология тело
+                    <li class="sale__item">
+                        <img src="./img/sale2.jpg" alt="">
+                        <div class="sale__date">2021.11.12</div>
+                        <h3 class="sale__title">Скидки на услуги подолога</h3>
+                        <div class="sale__text">
+                            Консультация у подолога - 50% / 1500 р. вместо 3000 рублей. / Первая услуга у подолога. "Знакомство с подологом" - 20%
+                        </div>
+                        <a href="#" class="sale__link yellow__btn-link js-ajax-link">Получить скидку</a>
+                    </li>
+                    <li class="sale__item">
+                        <img src="./img/sale3.jpg" alt="">
+                        <div class="sale__date">2021.11.12</div>
+                        <h3 class="sale__title">Скидки на уход за волосами</h3>
+                        <div class="sale__text">
+                            KERASTASE - 20% <br>
+                            Kevin.Murphy - 20%
+                        </div>
+                        <a href="#" class="sale__link yellow__btn-link js-ajax-link">Получить скидку</a>
+                    </li>
+                    <li class="sale__item">
+                        <img src="./img/sale4.jpg" alt="">
+                        <div class="sale__date">2021.11.12</div>
+                        <h3 class="sale__title">Косметика <br> для лица <br> со скидкой</h3>
+                        <div class="sale__text">
+                            Косметика ZO Skin Helth by Zein Obagi - 20%
+                        </div>
+                        <a href="#" class="sale__link yellow__btn-link js-ajax-link">Получить скидку</a>
                     </li>
                 </ul>
             </div>
-        </section>
-        <section class="category">
-            <div class="container">
-                <h1 class="category__heading">Косметология тело</h1>
-            </div>
-            <ul class="category__list">
-                <li class="category__item accordion">
-                    <div class="container">
-                        <div class="category__counter">
-                            <div class="category__number">1</div>
-                            <div class="category__number">4</div>
-                        </div>
-                        <div class="category__img">
-                            <img src="./img/cosm1.jpg" alt="">
-                        </div>
-                        <div class="category__flex">
-                            <h2 class="category__title">Starvac <br> ваккумно-роликовый массаж</h2>
-                            <div class="category__text">
-                                Процедура способствует активизации крово- и лимфотока, улучшению трофики тканей, укреплению сосудов, восстановлению мышечного тонуса.
-                            </div>
-                            <div class="accordion__content">
-                                <ul class="prices__pricelist">
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="category__links">
-                                <a href="#" class="yellow__btn-link category__link">Записаться</a>
-                                <a href="#" class="border-btn category__link">Подробнее</a>
-                            </div>
-                            <button class="category__arr accordion__heading">
-                                <img src="./img/acc-cosmetology.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category__item accordion">
-                    <div class="container">
-                        <div class="category__counter">
-                            <div class="category__number">2</div>
-                            <div class="category__number">4</div>
-                        </div>
-                        <div class="category__img">
-                            <img src="./img/cosm2.jpg" alt="">
-                        </div>
-                        <div class="category__flex">
-                            <h2 class="category__title">Starvac <br> ваккумно-роликовый массаж</h2>
-                            <div class="category__text">
-                                Процедура способствует активизации крово- и лимфотока, улучшению трофики тканей, укреплению сосудов, восстановлению мышечного тонуса.
-                            </div>
-                            <div class="accordion__content">
-                                <ul class="prices__pricelist">
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="category__links">
-                                <a href="#" class="yellow__btn-link category__link">Записаться</a>
-                                <a href="#" class="border-btn category__link">Подробнее</a>
-                            </div>
-                            <button class="category__arr accordion__heading">
-                                <img src="./img/acc-cosmetology.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category__item accordion">
-                    <div class="container">
-                        <div class="category__counter">
-                            <div class="category__number">3</div>
-                            <div class="category__number">4</div>
-                        </div>
-                        <div class="category__img">
-                            <img src="./img/cosm3.jpg" alt="">
-                        </div>
-                        <div class="category__flex">
-                            <h2 class="category__title">Starvac <br> ваккумно-роликовый массаж</h2>
-                            <div class="category__text">
-                                Процедура способствует активизации крово- и лимфотока, улучшению трофики тканей, укреплению сосудов, восстановлению мышечного тонуса.
-                            </div>
-                            <div class="accordion__content">
-                                <ul class="prices__pricelist">
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="category__links">
-                                <a href="#" class="yellow__btn-link category__link">Записаться</a>
-                                <a href="#" class="border-btn category__link">Подробнее</a>
-                            </div>
-                            <button class="category__arr accordion__heading">
-                                <img src="./img/acc-cosmetology.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category__item opend">
-                    <div class="container">
-                        <div class="category__counter">
-                            <div class="category__number">4</div>
-                            <div class="category__number">4</div>
-                        </div>
-                        <div class="category__img">
-                            <img src="./img/cosm4.jpg" alt="">
-                        </div>
-                        <div class="category__flex">
-                            <h2 class="category__title">Starvac <br> ваккумно-роликовый массаж</h2>
-                            <div class="category__text">
-                                Процедура способствует активизации крово- и лимфотока, улучшению трофики тканей, укреплению сосудов, восстановлению мышечного тонуса.
-                            </div>
-                            <div class="category__content">
-                                <ul class="prices__pricelist">
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Макияж "Touch up"</span>
-                                        <span>1500 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Вечерний makeup</span>
-                                        <span>2000 ₽</span>
-                                    </li>
-
-                                    <li class="prices__priceitem">
-                                        <span>Лифтинг makeup (техника возрастного макияжа)</span>
-                                        <span>8000 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>"Макияж для себя" (урок макияжа 1 час)</span>
-                                        <span>1200 ₽</span>
-                                    </li>
-                                    <li class="prices__priceitem">
-                                        <span>Накладные ресницы (пучки/лента)</span>
-                                        <span>2500 ₽</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="category__links">
-                                <a href="#" class="yellow__btn-link category__link">Записаться</a>
-                                <a href="#" class="border-btn category__link">Подробнее</a>
-                            </div>
-                            <button class="category__arr accordion__heading">
-                                <img src="./img/acc-cosmetology.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
         </section>
     </main>
     <footer class="footer">

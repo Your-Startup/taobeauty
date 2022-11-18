@@ -78,6 +78,8 @@ input:focus-within {
 /* header */
 
 header {
+    position: relative;
+    z-index: 10;
     padding: 10px 0;
     border-bottom: 1px solid #B48956;
 }
@@ -101,7 +103,7 @@ header {
     margin-right: 120px;
 }
 
-.header__item a {
+.header__item a:nth-child(1):not(.fixed-menu__list li a) {
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -111,6 +113,9 @@ header {
     text-transform: uppercase;
     color: #000000;
     text-decoration: none;
+    transition: border .3s linear;
+    position: relative;
+    z-index: 3;
 }
 
 .nav-menu {
@@ -572,4 +577,109 @@ header {
 
 .main-text__content p:last-child {
     margin-bottom: 0;
+}
+
+.fixed-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 48px;
+    padding-top: 15px;
+    display: none;
+}
+
+.header__item:hover .fixed-menu {
+    display: block;
+}
+
+.header__item.active a:nth-child(1):not(.fixed-menu__list li a) {
+    border-bottom: 2px solid #B48956;
+}
+
+.fixed-menu__bg {
+    position: absolute;
+    top: 0;
+    margin-top: 15px;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: rgba(83, 110, 121, 0.7);;
+}
+
+.fixed-menu__block {
+    position: relative;
+    z-index: 5;
+    background-color: #CAA172;
+    padding: 45px 0;
+}
+
+.fixed-menu__list {
+    display: flex;
+    gap: 0 30px;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #B48956;
+}
+
+.fixed-menu__title {
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140.62%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F9F9F9;
+    margin-bottom: 15px;
+}
+
+.fixed-menu__list-sec {
+    min-width: 400px;
+}
+
+.fixed-menu__list-sec li a {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 172.12%;
+    color: #000000;
+    border: none;
+    text-decoration: none;
+}
+
+.fixed-menu__list-sec li {
+    margin-bottom: 10px;
+}
+
+.fixed-menu__list-sec li:last-child {
+    margin-bottom: 0;
+}
+
+.fixed-menu__wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+.fixed-menu__wrap .fixed-menu__list-sec {
+    min-width: 290px;
+}
+
+.fixed-wrap__help {
+    padding-top: 25px;
+}
+
+.fixed-wrap__help span, .fixed-wrap__help a {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 172.12%;
+    color: #000000;
+    text-decoration: none;
+}
+
+.fixed-wrap__help a {
+    border-bottom: 1px solid #B48956;
 }
