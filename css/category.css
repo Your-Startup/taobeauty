@@ -161,62 +161,6 @@
     background-color: transparent;
 }
 
-.prices__pricelist {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    margin-bottom: 50px;
-}
-
-.prices__priceitem:first-child {
-    border-top: 1px solid #B48956;
-}
-
-.prices__priceitem {
-    padding: 5px 0 3.85px;
-    width: 550px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    border-bottom: 1px solid #B48956;
-}
-
-.prices__priceitem span:nth-child(1) {
-    max-width: 400px;
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 205%;
-    letter-spacing: 0.155em;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.prices__priceitem span:nth-child(2) {
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 226.5%;
-    letter-spacing: 0.155em;
-    text-transform: uppercase;
-    padding-right: 45px;
-}
-
 .category__item.opend {
     background-color: #f0e7dd;
     border-top: 1px solid #B48956;
