@@ -1,0 +1,249 @@
+.blog-page__block {
+    margin-top: 171px;
+}
+
+.blog-page__heading {
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 140.62%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #476B7A;
+    margin: 0 0 5px 0;
+}
+
+.blog-page__svg {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+
+.blog-page__table {
+    border-top: 1px solid #B48956;
+    border-bottom: 1px solid #B48956;
+    margin-bottom: 60px;
+}
+
+.block-page__list {
+    display: flex;
+}
+
+.block-page__list li {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 1160px;
+    border-right: 1px solid #B48956;
+}
+
+.block-page__list li:nth-child(1),
+.block-page__list li:nth-child(3) {
+    width: 430px;
+}
+
+.block-page__list li:nth-child(2) {
+    width: 575px;
+}
+
+.block-page__list li:last-child {
+    border-right: none;
+}
+
+.blog-page__news img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.blog-page__news {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-page__news.full {
+    height: 100%;
+}
+
+.blog-page__news.half {
+    height: 50%;
+    position: relative;
+}
+
+.blog-page__item:nth-child(1) .blog-page__news.half::after {
+    position: absolute;
+    content: '';
+    left: -100vh;
+    right: -15px;
+    bottom: 0;
+    height: 1px;
+    background-color: #B48956;
+}
+
+.blog-page__item:nth-child(3) .blog-page__news.half::after {
+    position: absolute;
+    content: '';
+    right: -100vh;
+    left: -15px;
+    bottom: 0;
+    height: 1px;
+    background-color: #B48956;
+}
+
+.blog-page__item .blog-page__news.half:nth-child(2)::after {
+    content: none;
+}
+
+.blog-page__news.half:nth-child(2) {
+    padding-top: 15px;
+}
+
+.blog-page__category {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.13%;
+    text-align: center;
+    color: #B48956;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.blog-page__title a {
+    display: block;
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #B48956;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.full .blog-page__title a {
+    font-size: 48px;
+    line-height: 100%;
+}
+
+.blog-page__text {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    text-align: center;
+    color: #000000;
+}
+
+.works {
+    margin-bottom: 55px;
+}
+
+.works__title {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.13%;
+    text-align: center;
+    color: #B48956;
+    margin-bottom: 25px;
+}
+
+.works__heading {
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #B48956;
+    margin-bottom: 55px;
+}
+
+.works__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 30px;
+}
+
+.works__item {
+    width: calc((100% / 5) - 15px);
+}
+
+.works__item img {
+    width: 100%;
+}
+
+.style__svg {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 90px;
+}
+
+.style {
+    margin-bottom: 240px;
+}
+
+.style__list {
+    display: flex;
+}
+
+.style__wrap {
+    border-top: 1px solid #B48956;
+    border-bottom: 1px solid #B48956;
+}
+
+.style__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 2);
+    padding: 15px;
+    min-height: 756px;
+    border-right: 1px solid #B48956;
+}
+
+.style__item:last-child {
+    border: none;
+}
+
+.style__item img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.style__category {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.13%;
+    text-align: center;
+    color: #B48956;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.style__title a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    color: #B48956;
+}

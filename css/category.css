@@ -392,7 +392,9 @@
     padding-bottom: 80px;
 }
 
-.category__result, .category__result-title, .category__subtitle {
+.category__result,
+.category__result-title,
+.category__subtitle {
     display: flex;
 }
 
@@ -601,6 +603,7 @@
     width: 100%;
 }
 
+
 /* procedure */
 
 .procedure__stages {
@@ -631,7 +634,6 @@
 .procedure__stages li:last-child {
     border-bottom: 1px solid #B48956;
 }
-
 
 .procedure__flex {
     width: 545px;
@@ -723,7 +725,8 @@
     border: 1px solid #B48956;
 }
 
-.category__spec-imgs, .category__spec-content {
+.category__spec-imgs,
+.category__spec-content {
     width: calc(50% - 30px);
 }
 
@@ -738,7 +741,8 @@
     flex-direction: column;
 }
 
-.category__spec-content p, .category__spec-content h4 {
+.category__spec-content p,
+.category__spec-content h4 {
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -748,7 +752,8 @@
     display: block;
 }
 
-.category__spec-content p, .category__spec-content li {
+.category__spec-content p,
+.category__spec-content li {
     margin-bottom: 15px;
 }
 

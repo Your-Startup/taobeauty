@@ -7,7 +7,7 @@ export default function initSales() {
     };
 
     ajaxLinks.forEach(link => {
-        link.addEventListener('click', async (e) => {
+        link.addEventListener('click', async(e) => {
             e.preventDefault();
 
             fetch(link.href)
@@ -47,6 +47,6 @@ export default function initSales() {
         if (e.target.classList.contains('popup-img-close')) {
             closePopup();
         }
-        
+
     });
 };
