@@ -394,6 +394,12 @@ header {
     color: #B48956;
 }
 
+.breadcrumbs-svg {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
 .transp__btn-link {
     display: inline-block;
     font-family: 'Jost', sans-serif;
