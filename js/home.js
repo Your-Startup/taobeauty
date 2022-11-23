@@ -5,6 +5,7 @@ import initMap from './home/map.js';
 import initCosmetology from './cosmetology/accordion.js';
 import initHeader from './components/header.js';
 import initSales from './sale/sale.js';
+import initCertificates from './certificates/certificates.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     mainSlider();
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initCosmetology();
     initHeader();
     initSales();
+    initCertificates();
 });

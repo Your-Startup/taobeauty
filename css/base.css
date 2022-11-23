@@ -73,9 +73,17 @@ ul {
 }
 
 input,
+textarea,
+select,
 input:focus,
+textarea:focus,
+select:focus,
 input:focus-visible,
-input:focus-within {
+textarea:focus-visible,
+select:focus-visible,
+input:focus-within,
+textarea:focus-within,
+select:focus-within {
     outline: none;
 }
 
