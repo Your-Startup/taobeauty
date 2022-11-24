@@ -818,3 +818,156 @@
 .page .category__content-block {
     margin-top: 0;
 }
+
+.category__docs {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 50px;
+}
+
+.category__docs-sublist {
+    padding-top: 15px;
+    width: 545px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+}
+
+.category__docs-subitem {
+    width: 255px;
+    border: none !important;
+}
+
+.category__docs-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.category__docs-bg {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(202, 161, 114, .5);
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.category__docs-bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform .3s linear;
+}
+
+.category__docs-bg img:nth-child(1) {
+    z-index: 2;
+    left: calc(50% - 5px);
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.category__docs-bg img:nth-child(2) {
+    transform: translateX(-50%) translateY(-50%) scale(0);
+}
+
+.category__docs-link:hover .category__docs-bg img:nth-child(1) {
+    transform: translateX(-50%) translateY(-50%) scale(0);
+}
+
+.category__docs-link:hover .category__docs-bg img:nth-child(2) {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.category__docs-text {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 126%;
+    color: #B48956;
+}
+
+.category__docs-heading, .category__organizations-heading {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.category.page {
+    margin-top: 165px;
+}
+
+.category__organisations {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.category__content-block.spec {
+    border-bottom: none;
+}
+
+.category__organizations-list {
+    width: 545px;
+}
+
+.category__organizations-list li {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #B48956;
+    padding-bottom: 40px;
+}
+
+.category__organization-number {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 215.5%;
+    letter-spacing: 0.155em;
+    text-transform: uppercase;
+    color: #B48956;
+    margin-bottom: 10px;
+}
+
+.category__organization-text {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.category__organization-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category__organization-contacts div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0 30px;
+}
+
+.category__organization-contacts dt {
+    width: 120px;
+}
+
+.category__organization-contacts dt, .category__organization-contacts dd {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+}

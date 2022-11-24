@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>Pakt</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header__nav">
+                <a href="#" class="header__link">
+                    <img src="./img/header-logo.svg" alt="">
+                </a>
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="">
+                            О нас
+                        </a>
+                        <div class="fixed-menu">
+                            <div class="fixed-menu__bg"></div>
+                            <div class="fixed-menu__block">
+                                <div class="container">
+                                    <ul class="fixed-menu__list">
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Клиника
+                                            </div>
+                                            <ul class="fixed-menu__list-sec">
+                                                <li>
+                                                    <a href="">
+                                                        Инъекционная косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эстетическая косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для лица
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для тела
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эпиляция
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Подология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Трихология
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Салон красоты
+                                            </div>
+                                            <div class="fixed-menu__wrap">
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки женские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки мужские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки детские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Укладки и прически
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Окрашивание волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Тонирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Трихология
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Мелирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Лечение и уход
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">                                     
+                                                            Визаж
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Маникюр
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Педикюр 
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="fixed-wrap__help">
+                                        <span>
+                                            Не знаете, какая процедура подходит именно Вам?
+                                        </span>
+                                        <a href="">
+                                            Выбрать услугу по проблемам
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a href="">
+                            Услуги и цены
+                        </a>
+                        <div class="fixed-menu">
+                            <div class="fixed-menu__bg"></div>
+                            <div class="fixed-menu__block">
+                                <div class="container">
+                                    <ul class="fixed-menu__list">
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Клиника
+                                            </div>
+                                            <ul class="fixed-menu__list-sec">
+                                                <li>
+                                                    <a href="">
+                                                        Инъекционная косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эстетическая косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для лица
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для тела
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эпиляция
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Подология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Трихология
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Салон красоты
+                                            </div>
+                                            <div class="fixed-menu__wrap">
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки женские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки мужские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки детские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Укладки и прически
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Окрашивание волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Тонирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Трихология
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Мелирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Лечение и уход
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">                                     
+                                                            Визаж
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Маникюр
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Педикюр 
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="fixed-wrap__help">
+                                        <span>
+                                            Не знаете, какая процедура подходит именно Вам?
+                                        </span>
+                                        <a href="">
+                                            Выбрать услугу по проблемам
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a href="">
+                            Сертификаты
+                        </a>
+                        <div class="fixed-menu">
+                            <div class="fixed-menu__bg"></div>
+                            <div class="fixed-menu__block">
+                                <div class="container">
+                                    <ul class="fixed-menu__list">
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Клиника
+                                            </div>
+                                            <ul class="fixed-menu__list-sec">
+                                                <li>
+                                                    <a href="">
+                                                        Инъекционная косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эстетическая косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для лица
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для тела
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эпиляция
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Подология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Трихология
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Салон красоты
+                                            </div>
+                                            <div class="fixed-menu__wrap">
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки женские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки мужские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки детские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Укладки и прически
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Окрашивание волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Тонирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Трихология
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Мелирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Лечение и уход
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">                                     
+                                                            Визаж
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Маникюр
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Педикюр 
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="fixed-wrap__help">
+                                        <span>
+                                            Не знаете, какая процедура подходит именно Вам?
+                                        </span>
+                                        <a href="">
+                                            Выбрать услугу по проблемам
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a href="">
+                            Акции
+                        </a>
+                        <div class="fixed-menu">
+                            <div class="fixed-menu__bg"></div>
+                            <div class="fixed-menu__block">
+                                <div class="container">
+                                    <ul class="fixed-menu__list">
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Клиника
+                                            </div>
+                                            <ul class="fixed-menu__list-sec">
+                                                <li>
+                                                    <a href="">
+                                                        Инъекционная косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эстетическая косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для лица
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для тела
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эпиляция
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Подология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Трихология
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Салон красоты
+                                            </div>
+                                            <div class="fixed-menu__wrap">
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки женские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки мужские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки детские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Укладки и прически
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Окрашивание волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Тонирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Трихология
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Мелирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Лечение и уход
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">                                     
+                                                            Визаж
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Маникюр
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Педикюр 
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="fixed-wrap__help">
+                                        <span>
+                                            Не знаете, какая процедура подходит именно Вам?
+                                        </span>
+                                        <a href="">
+                                            Выбрать услугу по проблемам
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a href="">
+                            Контакты
+                        </a>
+                        <div class="fixed-menu">
+                            <div class="fixed-menu__bg"></div>
+                            <div class="fixed-menu__block">
+                                <div class="container">
+                                    <ul class="fixed-menu__list">
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Клиника
+                                            </div>
+                                            <ul class="fixed-menu__list-sec">
+                                                <li>
+                                                    <a href="">
+                                                        Инъекционная косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эстетическая косметология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для лица
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Аппаратная косметология для тела
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Эпиляция
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Подология
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Трихология
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="fixed-menu__title">
+                                                Салон красоты
+                                            </div>
+                                            <div class="fixed-menu__wrap">
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки женские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки мужские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Стрижки детские
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Укладки и прически
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Окрашивание волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Тонирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Трихология
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="fixed-menu__list-sec">
+                                                    <li>
+                                                        <a href="">
+                                                            Мелирование волос
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Лечение и уход
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">                                     
+                                                            Визаж
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Маникюр
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            Педикюр 
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="fixed-wrap__help">
+                                        <span>
+                                            Не знаете, какая процедура подходит именно Вам?
+                                        </span>
+                                        <a href="">
+                                            Выбрать услугу по проблемам
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="category page">
+            <div class="container">
+                <h2 class="category-page__title">Документы</h2>
+                <ul class="category__content-block spec">
+                    <li class="category__docs">
+                        <h3 class="category__docs-heading">Документы</h3>
+                        <ul class="category__docs-sublist">
+                            <li class="category__docs-subitem">
+                                <a class="category__docs-link" href="#">
+                                    <div class="category__docs-bg">
+                                        <img src="./img/pdf.svg" alt="">
+                                        <img src="./img/pdf-arrow.svg" alt="">
+                                    </div>
+                                    <p class="category__docs-text">
+                                        Санитарно-Эпидемотологическое. заключение СПА-СТ
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="category__docs-subitem">
+                                <a class="category__docs-link" href="#">
+                                    <div class="category__docs-bg">
+                                        <img src="./img/pdf.svg" alt="">
+                                        <img src="./img/pdf-arrow.svg" alt="">
+                                    </div>
+                                    <p class="category__docs-text">
+                                        Свидетельство регистрации юридического лица
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="category__docs-subitem">
+                                <a class="category__docs-link" href="#">
+                                    <div class="category__docs-bg">
+                                        <img src="./img/pdf.svg" alt="">
+                                        <img src="./img/pdf-arrow.svg" alt="">
+                                    </div>
+                                    <p class="category__docs-text">
+                                        Лицензия на осуществление медицинской деятельности
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__organisations">
+                        <h3 class="category__organizations-heading">Контролирующие организации</h3>
+                        <ul class="category__organizations-list">
+                            <li>
+                                <div class="category__organization-number">1.</div>
+                                <div class="category__organization-text">
+                                    Управление федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по городу Москве ( Управление Роспотребнадзора по г. Москве )
+                                </div>
+                                <dl class="category__organization-contacts">
+                                    <div>
+                                        <dt>Адрес:</dt>
+                                        <dd>129626, Москва, Графский переулок, д. 4/9</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Справ. служба:</dt>
+                                        <dd>(495) 628-44-53, (495) 627-29-44</dd>
+                                    </div>
+                                </dl>
+                            </li>
+                            <li>
+                                <div class="category__organization-number">2.</div>
+                                <div class="category__organization-text">
+                                    Министерство здравоохранения Российской Федерации (Минздрав России) 
+                                </div>
+                                <dl class="category__organization-contacts">
+                                    <div>
+                                        <dt>Адрес:</dt>
+                                        <dd>127994, ГСП-4, Москва, Рахмановский пер, д.3 </dd>
+                                    </div>
+                                    <div>
+                                        <dt>Справ. служба:</dt>
+                                        <dd>(495) 628-44-53, (495) 627-29-44</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Многоканальный телефон:</dt>
+                                        <dd>(495) 627-24-00</dd>
+                                    </div>
+                                </dl>
+                            </li>
+                            <li>
+                                <div class="category__organization-number">3.</div>
+                                <div class="category__organization-text">
+                                    Управление Росздравнадзора по городу Москве и Московской области 
+                                </div>
+                                <dl class="category__organization-contacts">
+                                    <div>
+                                        <dt>Адрес:</dt>
+                                        <dd>127994, ГСП-4, Москва, Рахмановский пер, д.3 </dd>
+                                    </div>
+                                    <div>
+                                        <dt>Справ. служба:</dt>
+                                        <dd>(495) 628-44-53, (495) 627-29-44, <br> 8 (495) 611-55-77, 8 (495) 611-47-22</dd>
+                                    </div>
+                                    
+                                </dl>
+                            </li>
+                            <li>
+                                <div class="category__organization-number">4.</div>
+                                <div class="category__organization-text">
+                                    Единый номер службы спасения: 112
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="">
+                            Сертификаты
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            До и после
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Оборудование
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Документы
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="">
+                            Блог
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__socials">
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="./img/whatsapp.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="./img/tg.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__social">
+                        <a href="">
+                            <img src="./img/vk.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__content">
+                <div class="footer__flex">
+                    <div class="footer__text">
+                        <a class="footer__contact" href="tel:+74950211295">+ 7 (495) 021-12-95</a>
+                        <a class="footer__contact" href="mailto:info@tao-beauty.ru">info@tao-beauty.ru</a>
+                        <div class="footer__address">
+                            Москва, 125047, ул. Большая Садовая, 5к1
+                            <br> Вход со стороны улицы Гашека
+                            <br> Ежедневно: 10:00–22:00
+                        </div>
+                    </div>
+                    <div class="footer__privacy">
+                        <a class="footer__link" href="">Политика конфиденциальности</a>
+                        <a class="footer__link" href="">Карточка организации</a>
+                    </div>
+                </div>
+                <a class="footer__qr" href="">
+                    <img src="./img/qr.png" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/home.js" type="module"></script>
+</body>
+
+</html>
