@@ -971,3 +971,83 @@
     line-height: 172.12%;
     color: #000000;
 }
+
+.category__equipment-item {
+    position: relative;
+    display: flex;
+    gap: 0 15px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 80px;
+}
+
+.category__equipment-item .category__counter {
+    top: -5px;
+}
+
+.category__equipment-text {
+    width: 545px;
+    min-width: 545px;
+}
+
+.category__equipment-text h3 {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.category__equipment-img {
+    position: relative;
+    width: 375px;
+    margin-left: auto;
+}
+
+.category__equipment-img img {
+    position: relative;
+    z-index: 3;
+}
+
+.category__equipment-img::before {
+    z-index: 1;
+    position: absolute;
+    content: '';
+    width: 375px;
+    height: 375px;
+    border-radius: 50%;
+    border: 1px solid #CAA172;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+}
+
+.category__equipment-img::after {
+    z-index: 1;
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(75px);
+}
+
+.category__equipment-name {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 172%;
+    letter-spacing: -0.055em;
+    text-transform: uppercase;
+    color: rgba(217, 217, 217, 0.5);
+    transform: rotate(-90deg);
+    transform-origin: 70% 80%;
+}
