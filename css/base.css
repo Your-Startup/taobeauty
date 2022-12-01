@@ -603,12 +603,15 @@ header {
     left: 0;
     right: 0;
     top: 48px;
-    padding-top: 15px;
-    display: none;
+    padding-top: 26px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s linear;
 }
 
-.header__item:hover .fixed-menu {
-    display: block;
+.header__item.active .fixed-menu {
+    visibility: visible;
+    opacity: 1;
 }
 
 .header__item.active a:nth-child(1):not(.fixed-menu__list li a) {
@@ -618,7 +621,7 @@ header {
 .fixed-menu__bg {
     position: absolute;
     top: 0;
-    margin-top: 15px;
+    margin-top: 26px;
     left: 0;
     right: 0;
     min-height: 100vh;
