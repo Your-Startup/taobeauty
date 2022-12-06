@@ -380,9 +380,6 @@ header {
     padding-right: 45px;
 }
 
-
-/* accordion */
-
 .accordion__content {
     overflow: hidden;
     max-height: 0;
@@ -456,7 +453,7 @@ header {
 
 .services__inner-item:hover a,
 .services__inner-item.active a {
-    font-weight: bold;
+    text-shadow: 0 0 1px #000000;
 }
 
 .breadcrumbs.spec .services__inner-list {

@@ -151,8 +151,8 @@
     right: 0;
     background-color: transparent;
     border: none;
-    top: 50%;
-    transform: translateY(calc(-50% - 10px));
+    top: 160px;
+    height: 14px;
     transition: transform .4s linear;
 }
 
@@ -237,9 +237,7 @@
 }
 
 .category__item.opend .category__arr {
-    transform: translateY(calc(-50% + 10px)) rotateX(180deg);
-    top: auto;
-    bottom: 70px;
+    transform: rotateX(180deg);
 }
 
 .category__content {

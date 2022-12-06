@@ -20,7 +20,8 @@ function getAllCategories()
             $category->children =  get_categories([
                 'taxonomy'     => 'service-categories',
                 'type'         => 'post',
-                'orderby'      => 'name',
+                'meta_key'     => 'order',
+                'orderby'      => 'meta_value',
                 'order'        => 'ASC',
                 'parent'       => $category->cat_ID,
                 'hide_empty'   => 0,

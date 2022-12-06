@@ -272,19 +272,6 @@
 
 
 /* accordion */
-
-.accordion__content {
-    overflow: hidden;
-    max-height: 0;
-    -webkit-transition: max-height .5s linear;
-    -o-transition: max-height .5s linear;
-    transition: max-height .5s linear;
-}
-
-.accordion__heading {
-    cursor: pointer;
-}
-
 .services .accordion__block .accordion__heading {
     text-align: center;
     font-family: 'Alethia Pro', sans-serif;
