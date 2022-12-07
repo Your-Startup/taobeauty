@@ -1,0 +1,334 @@
+.category__spec-heading {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.13%;
+    color: #B48956;
+    margin-bottom: 20px;
+}
+
+.category__subtitle {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.13%;
+    color: #B48956;
+    margin-bottom: 5px;
+}
+
+.category-spec {
+    margin-top: 150px;
+}
+
+.category-spec__wrap {
+    padding-top: 210px;
+    padding-bottom: 120px;
+}
+
+.category__spec-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+}
+
+.category__spec-imgs img {
+    width: calc(50% - 15px);
+    border: 1px solid #B48956;
+}
+
+.category__spec-imgs,
+.category__spec-content {
+    width: calc(50% - 30px);
+}
+
+.category__specialist {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 30px;
+}
+
+.category__spec-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.category__spec-content p,
+.category__spec-content h4 {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    display: block;
+}
+
+.category__spec-content p,
+.category__spec-content li {
+    margin-bottom: 15px;
+}
+
+.category__spec-content h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.category__spec-text {
+    margin-bottom: 30px;
+}
+
+.category__spec-content ul {
+    padding-left: 15px;
+}
+
+.category__spec-content li {
+    padding-left: 15px;
+    position: relative;
+}
+
+.category__spec-content li::before {
+    position: absolute;
+    content: '.';
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    left: 0;
+    top: -4px;
+}
+
+.category-page__title {
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 140.62%;
+    text-transform: uppercase;
+    color: #B48956;
+    margin-bottom: 15px;
+}
+
+.category-page__text {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.page .category__content-block {
+    margin-top: 0;
+}
+
+.category__docs {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 50px;
+}
+
+.category__docs-sublist {
+    padding-top: 15px;
+    width: 545px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+}
+
+.category__docs-subitem {
+    width: 255px;
+    border: none !important;
+}
+
+.category__docs-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.category__docs-bg {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(202, 161, 114, .5);
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.category__docs-bg .file,
+.category__docs-bg .file-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform .3s linear;
+}
+
+.category__docs-bg .file {
+    z-index: 2;
+    left: calc(50% - 5px);
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.category__docs-bg .file .file-extension {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    top: 44px;
+    position: absolute;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 18px;
+}
+
+.category__docs-bg .file-arrow {
+    transform: translateX(-50%) translateY(-50%) scale(0);
+}
+
+.category__docs-link:hover .category__docs-bg .file {
+    transform: translateX(-50%) translateY(-50%) scale(0);
+}
+
+.category__docs-link:hover .category__docs-bg .file-arrow {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.category__docs-text {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 126%;
+    color: #B48956;
+}
+
+.category__docs-heading, .category__organizations-heading {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.category.page {
+    margin-top: 165px;
+}
+
+.category__organisations {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.category__content-block.spec {
+    border-bottom: none;
+}
+
+.category__organizations-list {
+    width: 545px;
+}
+
+.category__organizations-list li {
+    display: flex;
+    flex-direction: column; 
+    padding-bottom: 40px;
+}
+
+.category__organizations-list li:last-child {
+    border-bottom: 1px solid #B48956;
+}
+
+.category__organization-number {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 215.5%;
+    letter-spacing: 0.155em;
+    text-transform: uppercase;
+    color: #B48956;
+    margin-bottom: 10px;
+}
+
+.category__organization-text {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.category__organization-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category__organization-contacts div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0 30px;
+}
+
+.category__organization-contacts dt {
+    width: 120px;
+    min-width: 120px;
+}
+
+.category__organization-contacts dt, .category__organization-contacts dd {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+}
+
+.prices__priceitem.title {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+}
+
+.prices__priceitem span:nth-child(2) {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1;
+    color: #000000;
+    text-transform: none;
+    padding-right: 15px;
+    min-width: 60%;
+}
+
+.prices__priceitem span:first-child {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B48956;
+    min-width: 40%;
+}
+
