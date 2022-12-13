@@ -39,6 +39,10 @@ ul {
     margin: 0;
 }
 
+button {
+    cursor: pointer;
+}
+
 .btn {
     text-decoration: none;
     display: inline-block;

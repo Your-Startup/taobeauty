@@ -78,9 +78,9 @@ $table_prefix = 'wp_';
  *
  * @link https://ru.wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_DISPLAY', false );
-define( 'WP_DEBUG_LOG', false );
+define( 'WP_DEBUG_LOG', true );
 
 /* Произвольные значения добавляйте между этой строкой и надписью "дальше не редактируем". */
 

@@ -180,22 +180,12 @@ function taobeauty_scripts() {
 add_action( 'wp_enqueue_scripts', 'taobeauty_scripts' );
 
 function add_type_attribute($tag, $handle, $src) {
-    global $post;
-	if (!$post) {
+	if (strpos($handle, 'taobeauty-script-') === false) {
 		return $tag;
 	}
-	$pagename = $post->post_name;
 
-	if (is_single() || is_tax()) {
-		$pagename = $post->post_type;
-	}
-
-    if ( 'taobeauty-script-' . $pagename !== $handle ) {
-        return $tag;
-    }
-    // change the script tag by adding type="module" and return it.
-    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
-    return $tag;
+	$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+    return $tag;    
 }
 add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
 
@@ -233,6 +223,12 @@ require get_template_directory() . '/inc/helper.php';
 * Custom blocks.
 */
 require get_template_directory() . '/inc/custom-blocks.php';
+
+/**
+* Stocks.
+*/
+require get_template_directory() . '/inc/stocks.php';
+
 
 /**
  * Load Jetpack compatibility file.
