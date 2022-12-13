@@ -48,12 +48,13 @@
     display: flex;
     align-items: flex-start;
     margin-right: 30px;
-    width: 258px;
 }
 
 .category__item .category__img img {
     object-fit: cover;
     display: block;
+    width: 258px;
+    height: 230px;
 }
 
 .category__counter {
@@ -748,4 +749,109 @@
     font-size: 16px;
     line-height: 28px;
     color: #000000;
+}
+
+.category__spec-heading {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.13%;
+    color: #B48956;
+    margin-bottom: 20px;
+}
+
+.category__subtitle {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.13%;
+    color: #B48956;
+    margin-bottom: 5px;
+}
+
+.category-spec {
+    margin-top: 150px;
+}
+
+.category-spec__wrap {
+    padding-top: 210px;
+    padding-bottom: 120px;
+}
+
+.category__spec-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+}
+
+.category__spec-imgs img {
+    width: calc(50% - 15px);
+    border: 1px solid #B48956;
+}
+
+.category__spec-imgs,
+.category__spec-content {
+    width: calc(50% - 30px);
+}
+
+.category__specialist {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 30px;
+}
+
+.category__spec-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.category__spec-content p,
+.category__spec-content h4 {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    display: block;
+}
+
+.category__spec-content p,
+.category__spec-content li {
+    margin-bottom: 15px;
+}
+
+.category__spec-content h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.category__spec-text {
+    margin-bottom: 30px;
+}
+
+.category__spec-content ul {
+    padding-left: 15px;
+}
+
+.category__spec-content li {
+    padding-left: 15px;
+    position: relative;
+}
+
+.category__spec-content li::before {
+    position: absolute;
+    content: '.';
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    left: 0;
+    top: -4px;
+}
+
+.category__img-spec img {
+    border: 1px solid #B48956;
 }

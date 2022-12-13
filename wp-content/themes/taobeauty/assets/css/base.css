@@ -31,6 +31,9 @@ body {
     background-color: #fff;
     overflow-x: hidden;
     overflow-y: auto;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 ul {
