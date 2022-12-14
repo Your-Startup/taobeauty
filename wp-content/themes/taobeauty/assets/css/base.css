@@ -175,7 +175,11 @@ header {
     gap: 0 30px;
 }
 
-.footer__item a {
+.footer__list .menu-item {
+    margin-right: 0;
+}
+
+.footer__list a {
     text-decoration: none;
     font-family: 'Jost', sans-serif;
     font-style: normal;

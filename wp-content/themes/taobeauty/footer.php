@@ -14,33 +14,15 @@
     <footer class="footer">
         <div class="container">
             <nav class="footer__nav">
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a href="">
-                            Сертификаты
-                        </a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">
-                            До и после
-                        </a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">
-                            Оборудование
-                        </a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">
-                            Документы
-                        </a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">
-                            Блог
-                        </a>
-                    </li>
-                </ul>
+                <?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-footer',
+							'menu_id'        => 'footer-menu',
+                            'menu_class'     => 'footer__list',
+						)
+					);
+					?>
                 <ul class="footer__socials">
                     <li class="footer__social">
                         <a href="">
