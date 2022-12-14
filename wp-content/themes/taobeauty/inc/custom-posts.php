@@ -165,3 +165,9 @@ function register_post_types(){
 		'query_var'           => true,
 	] );
 }
+
+function edit_admin_menus() {
+    global $menu;
+    $menu[5][0] = 'Блог'; // Изменить название
+}
+add_action( 'admin_menu', 'edit_admin_menus' );
