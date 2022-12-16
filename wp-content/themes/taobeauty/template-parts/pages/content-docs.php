@@ -4,7 +4,7 @@ $data = get_fields();
 
 <section class="category page">
     <div class="container">
-        <h2 class="category-page__title">Документы</h2>
+        <h1 class="category-page__title">Документы</h1>
         <ul class="category__content-block spec">
             <?php if ($data['company_name'] && $data['company_data']) : ?>
                 <li class="category__prices">

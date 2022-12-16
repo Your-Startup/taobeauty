@@ -10,9 +10,9 @@ $stocks = get_posts([
 
 <section class="sale">
     <div class="container">
-        <h2 class="sale__heading">
+        <h1 class="sale__heading">
             события <span>и</span> спецпредложения
-        </h2>
+        </h1>
         <?php if ($stocks) : ?>
             <ul class="sale__list">
                 <?php foreach ($stocks as $stock) : ?>

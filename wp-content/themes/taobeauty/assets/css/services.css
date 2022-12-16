@@ -855,3 +855,38 @@
 .category__img-spec img {
     border: 1px solid #B48956;
 }
+
+.category-page__title {
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 140.62%;
+    text-transform: uppercase;
+    color: #B48956;
+    margin-bottom: 15px;
+}
+
+.category-page__text {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.btns-center {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.category.single .breadcrumbs__list {
+    margin: 15px 0;
+}
+
+.category.single .category__content-block {
+    margin-top: 15px;
+}

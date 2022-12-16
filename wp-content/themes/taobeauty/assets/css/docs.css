@@ -99,27 +99,6 @@
     top: -4px;
 }
 
-.category-page__title {
-    font-family: 'Alethia Pro', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 140.62%;
-    text-transform: uppercase;
-    color: #B48956;
-    margin-bottom: 15px;
-}
-
-.category-page__text {
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 172.12%;
-    color: #000000;
-    margin-bottom: 40px;
-}
-
 .page .category__content-block {
     margin-top: 0;
 }
