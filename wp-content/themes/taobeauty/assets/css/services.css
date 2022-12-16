@@ -890,3 +890,36 @@
 .category.single .category__content-block {
     margin-top: 15px;
 }
+
+.category-page__services-title {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 156%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 20px 0;
+}
+
+.category-page__content {
+    max-width: 50%;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    margin-bottom: 60px;
+}
+
+.category.single .breadcrumbs__bg {
+    position: relative;
+    top: 0;
+}
+
+
+body.single-services {
+    background-color: rgba(180, 137, 86, 0.2);
+}
