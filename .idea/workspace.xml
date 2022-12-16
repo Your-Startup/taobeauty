@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dec51dfc-59a8-4f3c-b8d6-65ee8779ae64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/taobeauty/assets/css/services.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/taobeauty/assets/css/services.css" afterDir="false" />
     </list>
@@ -57,7 +56,8 @@
       <workItem from="1671025813258" duration="4742000" />
       <workItem from="1671088398841" duration="6737000" />
       <workItem from="1671106325136" duration="8759000" />
-      <workItem from="1671115340336" duration="743000" />
+      <workItem from="1671115340336" duration="1341000" />
+      <workItem from="1671175107808" duration="8891000" />
     </task>
     <servers />
   </component>
