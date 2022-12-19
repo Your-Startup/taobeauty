@@ -9,7 +9,10 @@
             </li>
         </ul>
 
-        <img src="" alt="">
+        <?php $hieroglyph = get_field('hieroglyph'); ?>
+        <?php if ($hieroglyph) :  ?>
+            <img src="<?= $hieroglyph?>" alt="">
+        <?php endif; ?>
 
         <h1 class="category-page__title"><?php the_title(); ?></h1>
         <div class="category-page__content">

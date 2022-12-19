@@ -60,7 +60,10 @@ $services_count = count($services);
                 <?php endforeach; ?>
             </ul>
         <?php endif; ?>
-        <img src="./img/services.svg" class="services-img" alt="">
+        <?php $hieroglyph = get_field('hieroglyph', 'service-categories_' . $current_category->term_id); ?>
+        <?php if ($hieroglyph) :  ?>
+            <img src="<?= $hieroglyph?>" alt="" class="services-img">
+        <?php endif; ?>
     </div>
     <img class="breadcrumbs__bg" src="<?= $parent->bg_url ?>" alt="">
 </section>
