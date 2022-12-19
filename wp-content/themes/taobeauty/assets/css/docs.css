@@ -311,3 +311,81 @@
     min-width: 40%;
 }
 
+@media (max-width: 1240px) {
+    .category.page {
+        margin-top: 32px;
+        margin-bottom: 0;
+    }
+
+    .category.page .container {
+        padding: 0;
+    }
+
+    .category-page__title {
+        font-size: 48px;
+        line-height: 67px;
+        margin-top: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .category__prices {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 15px 20px 120px 20px !important;
+    }
+
+    .category__docs-heading {
+        margin-bottom: 57px !important;
+    }
+
+    .category__docs {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 15px 20px 6px 20px !important;
+    }
+
+    .category__docs-sublist {
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 50px;
+        width: 100%;
+    }
+
+    .category__organisations {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 15px 20px 80px 20px !important;
+    }
+
+    .category__organizations-heading {
+        margin-bottom: 35px;
+    }
+
+    .category__organizations-list {
+        width: 100%;
+    }
+
+    .category__organizations-list li {
+        padding-bottom: 25px;
+    }
+
+    .category__organization-number {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 505px) {
+    .category__docs-sublist {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 370px) {
+    .category-page__title {
+        font-size: 40px;
+        line-height: 59px;
+    }
+}
