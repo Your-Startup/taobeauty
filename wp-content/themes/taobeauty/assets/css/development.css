@@ -1,0 +1,60 @@
+.notfound {
+    position: relative;
+    background: rgba(180, 137, 86, 0.2);
+    padding: 160px 0 180px;
+}
+
+.notfound .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notfound__img {
+    width: 26px;
+    height: 24px;
+    display: block;
+    margin-bottom: 90px;
+}
+
+.notfound__text {
+    font-family: 'Jost', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    text-align: center;
+    color: #000000;
+}
+
+.notfound__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notfound__title span:nth-child(1), .notfound__title span:nth-child(3) {
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 140.62%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #B48956;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.notfound__title span:nth-child(2) {
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140.62%;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: lowercase;
+    color: #B48956;
+}
