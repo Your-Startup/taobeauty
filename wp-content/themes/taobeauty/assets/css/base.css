@@ -72,7 +72,9 @@ button {
     background-color: #476B7A;
 }
 
-input {
+input,
+select,
+textarea {
     outline: none;
 }
 
