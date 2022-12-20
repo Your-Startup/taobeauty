@@ -1077,10 +1077,73 @@ body.single-services {
     top: -140px;
 }
 
-.category.page.equipments {
+.category.page.equipments,
+.category.page.processes {
     margin-top: 160px;
 }
 
 .category.page.equipments .category__content-block {
     margin-top: 0px;
+}
+
+.category_slider {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.swiper.category_swiper .swiper-slide img {
+    max-width: 545px;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+.category_slider .category_slider_nav {
+    position: absolute;
+    right: 0;
+    left: auto !important;
+    top: 35px;
+    width: max-content !important;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.category_slider .category_slider_nav .swiper-pagination-bullet {
+    height: 6px;
+    width: 6px;
+    background-color: #B48956;
+    opacity: 1;
+    transition: 0.6s;
+    margin: 0;
+}
+
+.category_slider .category_slider_nav .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    transform: scale(2);
+    background-color: #B48956;
+}
+
+.category_button-prev,
+.category_button-next {
+    position: absolute;
+    z-index: 100;
+    bottom: 200px;
+    transition: 0.6s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.category_button-prev.swiper-button-disabled,
+.category_button-next.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.category_button-prev {
+    transform: translateX(-50%);
+}
+
+.category_button-next {
+    right: 0;
+    transform: translateX(50%);
 }

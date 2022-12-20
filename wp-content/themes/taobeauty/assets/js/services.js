@@ -1,4 +1,5 @@
 import Accordions from "./components/accordion.js";
+import {customBlockSliders} from "./components/swiper.js";
 
 function initServises() {
     const accordionsPrices = document.querySelectorAll('.accordion');
@@ -28,4 +29,5 @@ function initServises() {
  
 document.addEventListener('DOMContentLoaded', () => {
     initServises();
+    customBlockSliders();
 });

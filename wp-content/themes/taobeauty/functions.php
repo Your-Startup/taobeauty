@@ -153,6 +153,11 @@ function taobeauty_scripts() {
 	wp_style_add_data( 'taobeauty-style-services', 'rtl', 'replace' );
 	wp_enqueue_script('taobeauty-script-services', get_template_directory_uri() . '/assets/js/services.js', array(), _S_VERSION);
 
+	// SWIPER
+	wp_enqueue_style( 'taobeauty-swiper-style', get_template_directory_uri() . '/assets/css/swiper.css', array(), _S_VERSION );
+	wp_style_add_data( 'taobeauty-swiper-style', 'rtl', 'replace' );
+	wp_enqueue_script('taobeauty-script-swiper', get_template_directory_uri() . '/assets/js/libs/swiper.js', array(), _S_VERSION);
+
 	// PAGE/POST
 	global $post;
 	if ($post) {
@@ -162,12 +167,6 @@ function taobeauty_scripts() {
 			$pagename = $post->post_type;
 		}
 	
-		if ($pagename == 'home') {
-			wp_enqueue_style( 'taobeauty-swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), _S_VERSION );
-			wp_style_add_data( 'taobeauty-swiper-style', 'rtl', 'replace' );
-			wp_enqueue_script('taobeauty-script-swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), _S_VERSION);
-		}
-		
 		if (file_exists(get_template_directory() . '/assets/css/' . $pagename . '.css')) {
 			wp_enqueue_style( 'taobeauty-style-' . $pagename, get_template_directory_uri() . '/assets/css/' . $pagename . '.css', array(), _S_VERSION );
 			wp_style_add_data( 'taobeauty-style-' . $pagename, 'rtl', 'replace' );

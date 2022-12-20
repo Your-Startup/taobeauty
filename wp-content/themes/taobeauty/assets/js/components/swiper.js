@@ -114,3 +114,31 @@ export function blogSlider() {
         });
     }
 }
+
+
+export function customBlockSliders() {
+    const sliders = document.querySelectorAll('.swiper.category_swiper');
+    if (sliders.length > 0) {
+        sliders.forEach((slider) => {
+            const next = slider.parentElement.querySelector('.category_button-next'),
+                  prev = slider.parentElement.querySelector('.category_button-prev'),
+                  nav  = slider.parentElement.querySelector('.category_slider_nav');
+            new Swiper(slider, {
+                direction: 'horizontal',
+                loop: false,
+                speed: 1000,
+                spaceBetween: 32,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev,
+                },
+                pagination: {
+                    el: nav,
+                    clickable: true,
+                },
+            });
+        });
+    }
+}
