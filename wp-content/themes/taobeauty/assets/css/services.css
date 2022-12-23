@@ -1115,3 +1115,39 @@ body.single-services {
         display: none;
     }
 }
+
+@media (max-width: 810px) {
+    .sale__heading {
+        font-size: 46px;
+    }
+
+    .sale__heading > span {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 760px) {
+    .sale__heading {
+        font-size: 43px;
+    }
+
+    .sale__heading > span {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sale__heading {
+        font-size: 28px;
+    }
+
+    .sale__heading > span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .sale__heading {
+        font-size: 24px;
+    }
+}
