@@ -107,6 +107,8 @@ export function blogSlider() {
             loop: false,
             speed: 1000,
             spaceBetween: 170,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
             navigation: {
                 nextEl: '.blog-next',
                 prevEl: '.blog-prev',

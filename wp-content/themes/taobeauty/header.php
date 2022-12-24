@@ -9,7 +9,9 @@
  * @package Taobeauty
  */
 
+$sub_menu = get_field('menu', 'options')
 ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -45,3 +47,62 @@
 			</nav><!-- #site-navigation -->
 		</div>	
 	</header><!-- #masthead -->
+
+	<?php if ($sub_menu) : ?>
+		<div class="fixed-menu">
+			<div class="fixed-menu__bg"></div>
+			<div class="fixed-menu__block">
+				<div class="container">
+					<ul class="fixed-menu__list">
+						<?php foreach ($sub_menu as $item) : ?>
+							<?php $section = $item['section']; ?>
+							<li>
+								<div class="fixed-menu__title">
+									<?= $section['section_title'] ?>
+								</div>
+								<div class="fixed-menu__wrap">
+									<?php if ($section['columns']) : ?>
+										<?php foreach ($section['columns'] as $column) : ?>
+											<?php if ($column['item']) : ?>
+												<ul class="fixed-menu__list-sec">
+													<?php foreach ($column['item'] as $menu_item) : ?>
+														<?php 
+															$link = '/'; 
+															switch ($menu_item['type']) {
+																case 'category':
+																	$link = esc_url(get_category_link($menu_item['category']));
+																	break;
+																case 'service':
+																	$link = get_permalink($menu_item['service']);
+																	break;
+																case 'custom-link':
+																	$link = $menu_item['link'];
+																	break;
+															}
+														?>
+														<li>
+															<a href="<?= $link ?>">
+																<?= $menu_item['text'] ?>
+															</a>
+														</li>
+													<?php endforeach; ?>
+												</ul>
+											<?php endif; ?>
+										<?php endforeach; ?>
+									<?php endif; ?>
+								</div>
+							</li> 
+						<?php endforeach; ?>
+					</ul>
+					<div class="fixed-wrap__help">
+						<span>
+							Не знаете, какая процедура подходит именно Вам?
+						</span>
+						<a href="/#services-section" class="js-close-link">
+							Выбрать услугу по проблемам
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>

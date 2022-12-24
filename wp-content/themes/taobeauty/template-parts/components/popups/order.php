@@ -12,13 +12,14 @@ if ($data) : ?>
         <span><?= $data['title'] ?></span>
     </h3>
     <form class="popup__form" action="">
+        <input type="hidden" name="id" value="<?= $data['id'] ?>">
         <label class="popup__lebel" for="email">
             <span>Ваш e-mail или телефон</span>
-            <input class="popup__input" type="text">
+            <input class="popup__input" type="text" name="email" required>
         </label>
         <label class="popup__lebel" for="name">
             <span>Имя</span>
-            <input class="popup__input" type="text">
+            <input class="popup__input" type="text" name="name" required>
         </label>
         <button class="popup-sec-link yellow__btn-link">Получить скидку</button>
     </form>

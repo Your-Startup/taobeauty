@@ -34,6 +34,14 @@ function taobeauty_custom_header_setup() {
 }
 add_action( 'after_setup_theme', 'taobeauty_custom_header_setup' );
 
+function add_additional_class_on_li($classes, $item, $args) {
+	if ($item->url == '#services') {
+		$classes[] = 'menu-item-services';
+	}
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
 if ( ! function_exists( 'taobeauty_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.

@@ -891,6 +891,10 @@
     margin-top: 15px;
 }
 
+.category.single .container {
+    padding: 0;
+}
+
 .category-page__services-title {
     font-family: 'Jost';
     font-style: normal;

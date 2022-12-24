@@ -1,4 +1,5 @@
-let is_sending = false;
+let is_sending      = false,
+    is_form_sending = false;
 
 function initPopup() {
     const popup_bg = document.querySelector('.popup-bg');
@@ -67,6 +68,7 @@ function loadPopup(id) {
                     popup_order.innerHTML = result.templates.order;
 
                     popup_info.classList.add('active');
+                    initForm();
                 } else {
                     console.log(result.message);
                     closeAllPopup();
@@ -101,6 +103,48 @@ function closeAllPopup(full_close = true) {
             popup.classList.remove('active');
         }
     }
+}
+
+function initForm() {
+    const form = document.querySelector('.popup__form');
+    
+    if (!form) {
+        return;
+    }
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!is_form_sending) {
+            is_form_sending = true;
+            const data = new FormData(form);
+            data.append('action', 'stock_create_request');
+    
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', myajax.url);
+            xhr.send(data);
+        
+            xhr.onload = function() {
+                if (xhr.status != 200) {
+                    console.log(`Ошибка ${xhr.status}: ${xhr.statusText}`);
+                    closeAllPopup();
+                } else {
+                    const result = JSON.parse(xhr.response);
+    
+                    form.innerHTML = result.template;
+                }
+                is_form_sending = false;
+            }
+        
+            xhr.onerror = function() {
+                console.error("Запрос не удался");
+                is_form_sending = false;
+                closeAllPopup();
+            }
+        } else {
+            console.log('Запрос еще отправляется...');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,6 +1,7 @@
 <?php  $categories = getAllCategories(); ?>
 <?php if ($categories) : ?>
-    <section class="services">
+    <?php $count = count($categories); ?>
+    <section class="services" id="services-section">
         <div class="services__imgs-container">
             <div class="services__imgs-wrapper">
                 <?php foreach ($categories as $category_key => $category) : ?>
@@ -23,19 +24,22 @@
                 <h4 class="services__heading">Услуги</h4>
                 <ul class="services__list">
                     <?php foreach ($categories as $key => $category) : ?>
-                        <li class="accordion__block" data-category="<?= $key ?>">
+                        <li class="accordion__block<?php if ($count - 1 == $key) echo ' last_categogy'?>" data-category="<?= $key ?>">
                             <? $short_name = get_field('short_name', 'service-categories_' . $category->cat_ID); ?>
                             <div class="accordion__heading"><?= $short_name ? $short_name : $category->name ?></div>
                             <div class="accordion__content">
                                 <?php if ($category->children) : ?>
-                                    <ul class="services__inner-list" <?php echo $key == 3 ? 'style="max-width:750px;margin:0 auto;"' : ''; ?>>
-                                        <?php foreach ($category->children as $key => $sub_category) : ?>
-                                            <li class="services__inner-item">
-                                                <span><?= $key + 1 ?></span>
-                                                <a href="<?= esc_url(get_category_link($sub_category->cat_ID)) ?>"><?= $sub_category->name ?></a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                    <?php $children_groups = array_chunk($category->children, 3); ?>
+                                    <?php foreach ($children_groups as $childrens) : ?>
+                                        <ul class="services__inner-list">
+                                            <?php foreach ($childrens as $key => $sub_category) : ?>
+                                                <li class="services__inner-item">
+                                                    <span><?= $key + 1 ?></span>
+                                                    <a href="<?= esc_url(get_category_link($sub_category->cat_ID)) ?>"><?= $sub_category->name ?></a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endforeach; ?>
                                 <?php endif; ?>
                             </div>
                         </li>

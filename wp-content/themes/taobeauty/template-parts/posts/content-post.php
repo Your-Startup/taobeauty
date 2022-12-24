@@ -1,4 +1,4 @@
-<section class="category page single">
+<section class="breadcrumbs">
     <div class="container">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
@@ -8,12 +8,15 @@
                 <?php the_title(); ?>
             </li>
         </ul>
-
         <?php $hieroglyph = get_field('hieroglyph'); ?>
         <?php if ($hieroglyph) :  ?>
             <img src="<?= $hieroglyph?>" alt="">
         <?php endif; ?>
-
+    </div>
+</section>
+<section class="category page single">
+    <div class="container">
+        
         <h1 class="category-page__title"><?php the_title(); ?></h1>
         <div class="category-page__content">
             <?php the_content(); ?>

@@ -34,3 +34,15 @@ function getAllCategories()
 
     return $categories;
 }
+
+if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page(array(
+        'page_title'    => 'Доп. настройки',
+        'menu_title'    => 'Доп. настройки',
+        'menu_slug'     => 'theme-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+    
+}
