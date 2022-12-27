@@ -4,10 +4,13 @@ export default function initMap() {
     
         function init() {
             let myMap = new ymaps.Map("contacts-map", {
-                center: [55.76, 37.64],
-                zoom: 7,
+                center: window.coordinats,
+                zoom: 15,
                 controls: []
             });
+
+            var myPlacemark = new ymaps.Placemark(window.coordinats);
+            myMap.geoObjects.add(myPlacemark);
         }
     
         const bg = document.querySelector('.contacts__bg');

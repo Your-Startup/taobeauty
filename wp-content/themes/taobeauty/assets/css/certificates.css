@@ -1,0 +1,251 @@
+.certificates-page__title {
+    position: relative;
+    padding-bottom: 60px;
+    margin-bottom: 70px;
+}
+
+.certificates-page__title h1 {
+    position: relative;
+    z-index: 2;
+    font-family: 'Alethia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 140.62%;
+    text-transform: uppercase;
+    color: #B48956;
+    padding-top: 170px;
+    margin: 0;
+}
+
+.certificates-page__title img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.certificates-page__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.certificates-page__wrap img {
+    max-width: 560px;
+}
+
+.certificates-page__content {
+    padding-top: 65px;
+    max-width: 545px;
+}
+
+.certificates-page__content p {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    padding-bottom: 10px;
+}
+
+.certificates-page__text {
+    margin-bottom: 80px;
+}
+
+.certificates-page__text .container {
+    max-width: 1240px;
+}
+
+.certificates-page__steps {
+    margin-bottom: 410px;
+}
+
+.step-1 {
+    padding-top: 95px;
+    padding-bottom: 120px;
+    background-color: #476B7A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-1__wrap {
+    width: 864px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 0;
+}
+
+.step-1__wrap input {
+    display: none;
+}
+
+.step-1__label {
+    width: 50%;
+    position: relative;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.step-1__title {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B48956;
+    margin-bottom: 35px;
+}
+
+.step-2__title {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 55px;
+}
+
+.step-1__borders {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(180, 137, 86, 0.5);
+}
+
+.step-1__borders::before {
+    position: absolute;
+    content: url('../img/checkbox.svg');
+    bottom: 35px;
+    right: 40px;
+    opacity: 0;
+    transition: opacity .4s linear;
+}
+
+.step-1__wrap input:checked+.step-1__borders::before {
+    opacity: 1;
+}
+
+.step-1__wrap input:checked+.step-1__borders {
+    border-color: #B48956;
+}
+
+.step-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #B48956;
+    border-top: none;
+    padding: 95px 0 195px;
+}
+
+.step-2__wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.certificates-form-submit {
+    position: absolute;
+    bottom: -75px;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.step-2__item {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-2__label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.step-2__item:nth-child(1) {
+    padding-right: 30px;
+}
+
+.step-2__label input,
+.step-2__label select {
+    width: 100%;
+}
+
+.step-2__label textarea {
+    width: 100%;
+    resize: none;
+}
+
+.step-2__label span {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 172.12%;
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+.step-2__label select {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.step-2__label textarea {
+    height: 155px;
+}
+
+.step-2__label input,
+.step-2__label textarea,
+.step-2__label select {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 172.12%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding: 11.5px 15px;
+    border: 1px solid #B48956;
+}
+
+.step-2__label[for="select"]::after {
+    position: absolute;
+    content: url('../img/select.svg');
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    pointer-events: none;
+}
+
+.step-2__label[for="select"].active::after {
+    transform: rotate(180deg);
+}

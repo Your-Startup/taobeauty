@@ -22,48 +22,74 @@
                             'menu_class'     => 'footer__list',
 						)
 					);
-					?>
-                <ul class="footer__socials">
-                    <li class="footer__social">
-                        <a href="">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/whatsapp.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="footer__social">
-                        <a href="">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/tg.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="footer__social">
-                        <a href="">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/vk.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
+				?>
+                <?php $socials = get_field('socials', 'options'); ?>
+                <?php if ($socials) : ?>
+                    <ul class="footer__socials">
+                        <?php foreach ($socials as $social) : ?>
+                            <li class="footer__social">
+                                <a href="<?= $social['link'] ?>" target="_blank">
+                                    <img src="<?= $social['icon'] ?>" alt="">
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
             </nav>
             <div class="footer__content">
                 <div class="footer__flex">
                     <div class="footer__text">
-                        <a class="footer__contact" href="tel:+74950211295">+ 7 (495) 021-12-95</a>
-                        <a class="footer__contact" href="mailto:info@tao-beauty.ru">info@tao-beauty.ru</a>
+                        <?php $phone = get_field('phone', 'options'); ?>
+                        <?php if ($phone) : ?>
+                            <a class="footer__contact" href="tel:<?= $phone ?>"><?= $phone ?></a>
+                        <?php endif; ?>
+
+                        <?php $email = get_field('email', 'options'); ?>
+                        <?php if ($phone) : ?>
+                            <a class="footer__contact" href="mailto:<?= $email ?>"><?= $email ?></a>
+                        <?php endif; ?>
+
                         <div class="footer__address">
-                            Москва, 125047, ул. Большая Садовая, 5к1
-                            <br> Вход со стороны улицы Гашека
-                            <br> Ежедневно: 10:00–22:00
+                            <?php the_field('address', 'options') ?>
+                            <br> <?php the_field('address_tip', 'options') ?>
+                            <br> <?php the_field('work_time', 'options') ?>
                         </div>
                     </div>
                     <div class="footer__privacy">
-                        <a class="footer__link" href="">Политика конфиденциальности</a>
-                        <a class="footer__link" href="">Карточка организации</a>
+                        <?php $privacy_policy_link = get_field('privacy_policy_link', 'options'); ?>
+                        <?php if ($privacy_policy_link) : ?>
+                            <a class="footer__link" href="<?= $privacy_policy_link ?>">Политика конфиденциальности</a>
+                        <?php endif; ?>
+                        
+                        <?php $company_card_link = get_field('company_card_link', 'options'); ?>
+                        <?php if ($company_card_link) : ?>
+                            <a class="footer__link" href="<?= $company_card_link ?>">Карточка организации</a>
+                        <?php endif; ?>
                     </div>
                 </div>
-                <a class="footer__qr" href="">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/qr.png" alt="">
-                </a>
+                <?php $qr = get_field('qr_code', 'options'); ?>
+                <?php if ($qr) : ?>
+                    <div class="footer__qr">
+                        <img src="<?= $qr ?>" alt="">
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </footer>
 </div><!-- #page -->
+
+
+<?php if ($socials) : ?>
+    <ul class="social__list">
+        <?php foreach ($socials as $social) : ?>
+            <li class="social__item">
+                <a href="<?= $social['link'] ?>" target="_blank">
+                    <img src="<?= $social['icon'] ?>" alt="">
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 
