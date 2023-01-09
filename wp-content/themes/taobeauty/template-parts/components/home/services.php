@@ -30,11 +30,11 @@
                             <div class="accordion__content">
                                 <?php if ($category->children) : ?>
                                     <?php $children_groups = array_chunk($category->children, 3); ?>
-                                    <?php foreach ($children_groups as $childrens) : ?>
+                                    <?php foreach ($children_groups as $key => $childrens) : ?>
                                         <ul class="services__inner-list">
-                                            <?php foreach ($childrens as $key => $sub_category) : ?>
+                                            <?php foreach ($childrens as $sub_key => $sub_category) : ?>
                                                 <li class="services__inner-item">
-                                                    <span><?= $key + 1 ?></span>
+                                                    <span><?= $sub_key + 1 + (3 * $key) ?></span>
                                                     <a href="<?= esc_url(get_category_link($sub_category->cat_ID)) ?>"><?= $sub_category->name ?></a>
                                                 </li>
                                             <?php endforeach; ?>

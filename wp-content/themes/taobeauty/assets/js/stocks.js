@@ -12,7 +12,7 @@ function initPopup() {
             return;
         }
 
-        closeAllPopup(false);
+        //closeAllPopup(false);
 
         const type = open_btn.dataset.popup,
               popup = popup_bg.querySelector('#' + type);
@@ -48,6 +48,15 @@ function loadPopup(id) {
 
     if (!is_sending) {
         is_sending = true;
+
+        popup_info.innerHTML = '';
+        popup_order.innerHTML = '';
+
+        popup_info.classList.remove('hide');
+        popup_order.classList.remove('active');
+
+        popup_order.style.height = null;
+
         const data = new FormData();
         data.append('action', 'stock_info');
         data.append('id', id);
@@ -62,12 +71,19 @@ function loadPopup(id) {
                 closeAllPopup();
             } else {
                 const result = JSON.parse(xhr.response);
-
+                console.log(result);
                 if (result.success) {
-                    popup_info.innerHTML = result.templates.info;
-                    popup_order.innerHTML = result.templates.order;
+                    if (result.templates.info) {
+                        popup_info.innerHTML = result.templates.info;
+                        popup_order.innerHTML = result.templates.order;
+                        popup_order.style.height = popup_info.clientHeight + 'px';
+                        popup_info.classList.add('active');
+                    } else {
+                        popup_order.innerHTML = result.templates.order;
+                        popup_info.classList.add('hide');
+                        popup_order.classList.add('active');
+                    }
 
-                    popup_info.classList.add('active');
                     initForm();
                 } else {
                     console.log(result.message);

@@ -39,5 +39,7 @@ if ($data) : ?>
             </p>
         <?php endif; ?>
     </div>
-    <button class="popup__link yellow__btn-link js-open-popup" data-popup="order">Получить скидку</button>
+    <div class="popup-footer">
+        <button class="popup__link yellow__btn-link js-open-popup" data-popup="order">Получить скидку</button>
+    </div>
 <?php endif; ?>

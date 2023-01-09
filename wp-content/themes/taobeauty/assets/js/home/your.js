@@ -3,15 +3,20 @@ export default function yourAnimationInit() {
   const canvas  = document.querySelector('#your-canvas'),
         section = document.querySelector('section.your');
   
-  var animation_farame = 70,
-      section_top = section.offsetTop,
-      is_show = false;
+  let animation_farame = 70,
+      section_top      = section.offsetTop,
+      is_show          = false,
+      img_is_loaded    = false,
+      requestID        = null;
 
+ 
   var img = new Image();
   img.src = canvas.dataset.src;
   
-  let requestID = null;
-  
+  img.onload = () => {
+    img_is_loaded = true;
+  }
+
   function waves() {
   
     cancelAnimationFrame(requestID);
@@ -98,18 +103,37 @@ export default function yourAnimationInit() {
     scrollTop = scrollTop + window.innerHeight * 0.75;
 
     if (scrollTop >= section_top && !is_show) {
-      waves();
-      is_show = true;
-      section.classList.add('active');
-      setTimeout(() => {
-          const id = setInterval(() => {
-              if (animation_farame == 0) {
-                  clearInterval(id);
-                  cancelAnimationFrame(requestID);
-              } 
-              animation_farame--;
-          }, 20);
-      }, 1000);
+      if (!img_is_loaded) {
+        const id = setInterval(() => {
+          if (img_is_loaded) {
+            show();
+            clearInterval(id);
+          }
+        }, 50);
+      } else {
+        show();
+      }
     }
   });
+
+  function show() {
+    waves();
+    is_show = true;
+    section.classList.add('active');
+    setTimeout(() => {
+        const id = setInterval(() => {
+            if (animation_farame <= 0) {
+                clearInterval(id);
+                cancelAnimationFrame(requestID);
+                //endOpen();
+            } 
+            animation_farame--;
+        }, 20);
+    }, 1000);
+  }
+
+  function endOpen() {
+    canvas.classList.add('opend');
+    document.querySelector('.light').classList.add('opend');
+  }
 }

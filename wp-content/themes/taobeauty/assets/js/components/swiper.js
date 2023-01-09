@@ -3,6 +3,8 @@ export function mainSlider() {
         new Swiper('.main-slider__slider.swiper', {
             direction: 'horizontal',
             speed: 1000,
+            allowTouchMove: false,
+            grabCursor: false,
             pagination: {
                 el: '.main-slider__pagination',
                 clickable: true,
@@ -25,10 +27,13 @@ export function areaSlider() {
     if (document.querySelector('.area__slider.swiper')) {
         new Swiper('.area__slider.swiper', {
             direction: 'horizontal',
-            slidesPerView: 1,
+            slidesPerView: 3,
+            centeredSlides: true,
             speed: 1000,
-            spaceBetween: 70,
+            spaceBetween: 175,
             loop: true,
+            allowTouchMove: false,
+            grabCursor: false,
             pagination: {
                 el: '.area__pagination',
                 clickable: true,
@@ -105,6 +110,8 @@ export function blogSlider() {
         const mainSlider = new Swiper('.swiper.blog__slider', {
             direction: 'horizontal',
             loop: false,
+            allowTouchMove: false,
+            grabCursor: false,
             speed: 1000,
             spaceBetween: 170,
             slidesPerView: 2,
@@ -132,6 +139,8 @@ export function customBlockSliders() {
                 spaceBetween: 32,
                 slidesPerView: 2,
                 slidesPerGroup: 2,
+                allowTouchMove: false,
+                grabCursor: false,
                 navigation: {
                     nextEl: next,
                     prevEl: prev,

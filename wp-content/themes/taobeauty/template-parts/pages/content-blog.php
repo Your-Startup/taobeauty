@@ -19,7 +19,10 @@ $posts = get_posts([
 ?>
 
 <section class="blog-page__block">
-    <img src="./img/services.svg" class="services-img blog-page__svg" alt="">
+    <?php $hieroglyph = get_field('hieroglyph'); ?>
+    <?php if ($hieroglyph) :  ?>
+        <img src="<?= $hieroglyph?>" alt="" class="services-img blog-page__svg" >
+    <?php endif; ?>
     <h1 class="blog-page__heading">
         <?php the_title(); ?>
     </h1>
@@ -27,7 +30,9 @@ $posts = get_posts([
         <div class="block-page__list">
             <?php foreach ($data['items'] as $key => $item) : ?>
                 <a href="<?= get_permalink($item['data']->ID); ?>" class="blog-page__news <?php if ($key + 1 == 2) echo 'center'?>">
-                    <img src="<?= get_the_post_thumbnail_url($item['data']->ID) ?>" alt="">
+                    <div class="blog-page__news_img">
+                        <img src="<?= get_the_post_thumbnail_url($item['data']->ID) ?>" alt="">
+                    </div>
                     <div class="blog-page__news-content">
                         <div class="blog-page__category">
                             <?= get_field('sub-title', $item['data']->ID)?>
@@ -70,7 +75,9 @@ $posts = get_posts([
             <div class="style__list">
                 <?php foreach ($posts as $item) : ?>
                     <a href="<?= get_permalink($item->ID); ?>" class="blog-page__news">
-                        <img src="<?= get_the_post_thumbnail_url($item->ID) ?>" alt="">
+                        <div class="blog-page__news_img">
+                            <img src="<?= get_the_post_thumbnail_url($item->ID) ?>" alt="">
+                        </div>
                         <div class="blog-page__news-content">
                             <div class="blog-page__category">
                                 <?= get_field('sub-title', $item->ID)?>

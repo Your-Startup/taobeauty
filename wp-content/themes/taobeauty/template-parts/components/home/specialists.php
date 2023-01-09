@@ -44,11 +44,13 @@ $specialists = get_posts([
                                 </div>
                                 <img class="specialists__img" src="<?= get_field('img', $specialist->ID) ?>" alt="">
                                 <div class="specialists__block">
-                                    <div class="specialists__name">
-                                        <?= $specialist->post_title?>
-                                    </div>
-                                    <div class="specialists__profession">
-                                        <?= get_field('post', $specialist->ID) ?>
+                                    <div>
+                                        <div class="specialists__name">
+                                            <?= $specialist->post_title?>
+                                        </div>
+                                        <div class="specialists__profession">
+                                            <?= get_field('post', $specialist->ID) ?>
+                                        </div>
                                     </div>
                                     <div class="specialists__story">
                                         <?= get_field('short_text', $specialist->ID) ?>

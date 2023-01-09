@@ -23,7 +23,7 @@ $sub_menu = get_field('menu', 'options')
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> ondragstart="return false;" ondrop="return false;">
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'taobeauty' ); ?></a>
@@ -70,6 +70,7 @@ $sub_menu = get_field('menu', 'options')
 															$link = '/'; 
 															switch ($menu_item['type']) {
 																case 'category':
+																case 'category_problem' :
 																	$link = esc_url(get_category_link($menu_item['category']));
 																	break;
 																case 'service':

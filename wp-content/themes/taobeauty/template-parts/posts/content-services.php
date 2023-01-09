@@ -20,7 +20,7 @@
 
         <div class="btns-center">
             <div class="category__links">
-                <button class="yellow__btn-link category__link">Записаться</button>
+                <button class="yellow__btn-link category__link no-close">Записаться</button>
             </div>
         </div>
 

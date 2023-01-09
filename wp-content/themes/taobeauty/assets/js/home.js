@@ -3,6 +3,7 @@ import initServices from './home/services.js';
 import initPrices from './home/prices.js';
 import initMap from './home/map.js';
 import yourAnimationInit from './home/your.js';
+import smoothScroll from './libs/smooth-scroll.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     mainSlider();
@@ -13,4 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initPrices();
     initMap();
     yourAnimationInit();
+    smoothScroll();
+
+    var scroll = new SmoothScroll('a[href*="/#"]', {
+        speed: 500,
+        offset: 75
+    });
 });

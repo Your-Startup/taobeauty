@@ -4,6 +4,35 @@ function create_taxonomy(){
 	register_taxonomy( 'service-categories', [ 'services' ], [
 		'label'                 => '', // определяется параметром $labels->name
 		'labels'                => [
+			'name'              => 'Категории услуг (проблемы)',
+			'singular_name'     => 'Категория услуги (проблемы)',
+			'search_items'      => 'Поиск категории',
+			'all_items'         => 'Все категории',
+			'view_item '        => 'Показать категорию',
+			'parent_item'       => 'Родительская категория',
+			'parent_item_colon' => 'Родительские категории:',
+			'edit_item'         => 'Редактировать категорию',
+			'update_item'       => 'Обновить категорию',
+			'add_new_item'      => 'Создать категорию',
+			'new_item_name'     => 'Новая категория',
+			'menu_name'         => 'Категории (проблемы)',
+			'back_to_items'     => '← Назад к категориям',
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+
+		'rewrite'               => true,
+		'capabilities'          => array(),
+		'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
+		'show_admin_column'     => false, // авто-создание колонки таксы в таблице ассоциированного типа записи. (с версии 3.5)
+		'show_in_rest'          => null, // добавить в REST API
+		'rest_base'             => null, // $taxonomy
+	] );
+
+	register_taxonomy( 'categories', [ 'services' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
 			'name'              => 'Категории услуг',
 			'singular_name'     => 'Категория услуги',
 			'search_items'      => 'Поиск категории',
@@ -95,7 +124,7 @@ function register_post_types(){
 		'menu_icon'           => 'dashicons-admin-page',
 		'hierarchical'        => false,
 		'supports'            => [ 'title', 'custom-fields' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'          => ['service-categories'],
+		'taxonomies'          => ['service-categories', 'categories'],
 		'has_archive'         => false,
 		'rewrite'             => true,
 		'query_var'           => true,

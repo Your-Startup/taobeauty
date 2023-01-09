@@ -64,7 +64,7 @@
 }
 
 .certificates-page__steps {
-    margin-bottom: 410px;
+    margin-bottom: 240px;
 }
 
 .step-1 {
@@ -146,7 +146,7 @@
     opacity: 1;
 }
 
-.step-1__wrap input:checked+.step-1__borders {
+.step-1__wrap input:hover+.step-1__borders {
     border-color: #B48956;
 }
 
@@ -234,18 +234,4 @@
     color: #000000;
     padding: 11.5px 15px;
     border: 1px solid #B48956;
-}
-
-.step-2__label[for="select"]::after {
-    position: absolute;
-    content: url('../img/select.svg');
-    z-index: 5;
-    right: 0;
-    bottom: 0;
-    height: 50px;
-    pointer-events: none;
-}
-
-.step-2__label[for="select"].active::after {
-    transform: rotate(180deg);
 }

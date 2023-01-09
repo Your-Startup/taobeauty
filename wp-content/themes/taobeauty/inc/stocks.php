@@ -34,9 +34,13 @@ function stockInfo() {
     $data['id']    = $stockPost->ID;
     $data['title'] = $stockPost->post_title;
 
-    ob_start();
-	include_once(get_template_directory().'/template-parts/components/popups/info.php');
-	$template_info = ob_get_clean();
+    $template_info = false;
+
+    if ($data['table'] || $data['big_text']) {
+        ob_start();
+        include_once(get_template_directory().'/template-parts/components/popups/info.php');
+        $template_info = ob_get_clean();
+    }
 
     ob_start();
 	include_once(get_template_directory().'/template-parts/components/popups/order.php');

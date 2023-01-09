@@ -8,7 +8,7 @@
                 'taxonomy' => $category->taxonomy,
                 'field' => 'slug',
                 'terms' => $category->slug,
-                'include_children' => true,
+                'include_children' => false,
                 'operator' => 'IN'
             ],
         ],
@@ -46,7 +46,11 @@
                             <div class="category__number"><?= $services_count ?></div>
                         </div>
                         <div class="category__img">
-                            <img src="<?= get_field('img', $service->ID) ?>" alt="">
+                            <?php if ($img = get_field('img', $service->ID)) : ?>
+                                <img src="<?= $img ?>" alt="">
+                            <?php else : ?>
+                                <img src="<?= get_template_directory_uri() ?>/assets/img/no-img.jpg" alt="">
+                            <?php endif;?>
                         </div>
                         <div class="category__flex">
                             <h2 class="category__title"><?= $service->post_title ?></h2>
@@ -67,7 +71,7 @@
                                 <?php endif;?>
                             </div>
                             <div class="category__links">
-                                <button class="yellow__btn-link category__link">Записаться</button>
+                                <button class="yellow__btn-link category__link no-close">Записаться</button>
                                 <button class="border-btn category__link js-more">Подробнее</button>
                             </div>
                             <button class="category__arr accordion__heading">
