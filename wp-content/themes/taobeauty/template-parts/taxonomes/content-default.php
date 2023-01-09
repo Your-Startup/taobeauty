@@ -102,7 +102,7 @@ $services_count = count($services);
                                 <?php endif;?>
                             </div>
                             <div class="category__links">
-                                <button class="yellow__btn-link category__link">Записаться</button>
+                                <button class="yellow__btn-link category__link no-close">Записаться</button>
                                 <button class="border-btn category__link js-more">Подробнее</button>
                             </div>
                             <button class="category__arr accordion__heading">

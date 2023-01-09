@@ -30,7 +30,7 @@ $data = get_fields();
                     <ul class="category__docs-sublist">
                         <?php foreach ($data['docs'] as $doc) : ?>
                             <li class="category__docs-subitem">
-                                <a class="category__docs-link" href="<?= $doc['file']?>" download>
+                                <a class="category__docs-link" href="<?= $doc['file']?>" target="_blank">
                                     <div class="category__docs-bg">
                                         <div class="file">
                                             <div class="file-extension"><?= pathinfo($doc['file'])['extension'] ?></div>

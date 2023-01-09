@@ -10,7 +10,9 @@ export default function initServices() {
 function initAccordions () {
     const accordionsServices = document.querySelectorAll(".accordion__block");
     if (accordionsServices) { 
-        const accordions = new Accordions(accordionsServices);
+        const accordions = new Accordions(accordionsServices, {
+            duration: 0.5,
+        });
 
         accordions.items.forEach(accordion => {
             accordion.selector.onmouseenter = () => {
@@ -32,7 +34,8 @@ function initAccordions () {
 function initAnimation() {
     
     const section  = document.querySelector('section.services'),
-          services = document.querySelectorAll(".accordion__block");
+          services = document.querySelectorAll('.accordion__block'),
+          last_category = document.querySelector('.services__list .last_categogy');
 
     let prev_service = false,
         relation = 0.1;
@@ -57,7 +60,7 @@ function initAnimation() {
         prev_service = current_service;
 
         if (!is_service) {
-            document.querySelector('.services').classList.remove('more');
+            section.classList.remove('more');
             return;
         } 
 
@@ -65,16 +68,15 @@ function initAnimation() {
               imgs        = document.querySelectorAll('.services__decor-img.img-group-' + category),
               wrapper     = document.querySelector('.services__imgs-wrapper'),
               center_top  = wrapper.clientHeight / 2,
-              center_left = wrapper.clientWidth / 2,
-              position    = current_service.getBoundingClientRect();
+              center_left = wrapper.clientWidth / 2;
 
         let top = 0;
 
-        if (current_service.classList.contains('last_categogy') && position.top < window.innerHeight / 2 ) {
-            top = wrapper.clientHeight / 1.6;
-            document.querySelector('.services').classList.add('more');
+        if (current_service.classList.contains('bottom') ) {
+            top = 600;
+            section.classList.add('more');
         } else {
-            document.querySelector('.services').classList.remove('more');
+            section.classList.remove('more');
         }
 
         imgs.forEach(img => {
@@ -87,6 +89,16 @@ function initAnimation() {
             img.style.top = (Number(start_top) + Number(delta_top)) + 'px';
             img.style.left = (Number(start_left) + Number(delta_left)) + 'px';
         });
+    });
+
+    document.addEventListener('scroll', () => {
+        const position = last_category.getBoundingClientRect();
+
+        if (position.top < window.innerHeight / 2 && !last_category.classList.contains('opend')) {
+            last_category.classList.add('bottom');
+        } else if (!last_category.classList.contains('opend')) {
+            last_category.classList.remove('bottom');
+        }
     });
 }
 

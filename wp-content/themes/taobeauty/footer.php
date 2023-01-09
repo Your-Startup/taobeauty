@@ -80,7 +80,7 @@
 
 
 <?php if ($socials) : ?>
-    <ul class="social__list">
+    <ul class="social__list widget">
         <?php foreach ($socials as $social) : ?>
             <li class="social__item">
                 <a href="<?= $social['link'] ?>" target="_blank">
@@ -90,6 +90,21 @@
         <?php endforeach; ?>
     </ul>
 <?php endif; ?>
+
+<div class="popup-bg">
+    <div class="popup" id="info">
+        
+    </div>
+    <div class="popup-sec" id="order">
+
+    </div>
+    <div class="popup-zoom" id="zoom">
+        <div class="popup-close">
+            <img class="popup-img-close" src="<?= get_template_directory_uri() ?>/assets/img/popup-close.svg" alt="">
+        </div>
+        <img src="" alt="" class="zoom-img">
+    </div>
+</div>
 
 <?php wp_footer(); ?>
 

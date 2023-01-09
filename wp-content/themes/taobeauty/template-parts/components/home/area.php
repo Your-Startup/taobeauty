@@ -14,19 +14,18 @@
                     <div class="swiper-wrapper">
                         <?php foreach ($space as $img) : ?>
                             <div class="swiper-slide">
-                                <img src="<?= $img ?>" alt="">
+                                <img src="<?= $img ?>" alt="" class="js-open-zoom">
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <div class="container">
-                        <div class="area-btn area-prev">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/area-prev.svg" alt="">
-                        </div>
-                        <div class="area-btn area-next">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/area-next.svg" alt="">
-                        </div>
+                    <div class="area-btn area-prev">
+                        <img src="<?= get_template_directory_uri() ?>/assets/img/area-prev.svg" alt="">
+                    </div>
+                    <div class="area-btn area-next">
+                        <img src="<?= get_template_directory_uri() ?>/assets/img/area-next.svg" alt="">
                     </div>
                 </div>
+
             </div>
             <div class="container">
                 <div class="area__pagination"></div>

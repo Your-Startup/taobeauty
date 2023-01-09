@@ -49,11 +49,24 @@ $data = get_fields();
                     <div class="step-2__item">
                         <label class="step-2__label" for="select">
                             <span>Номинал</span>
-                            <select name="price" id="select">
-                                <option value="1000">1000</option>
-                                <option value="2000">2000</option>
-                                <option value="5000">5000</option>
-                            </select>
+                            <?php if ($data['denominations']) : ?>
+                                <div class="select">
+                                    <input type="hidden" name="price" value="<?= $data['denominations'][0]['value'] ?>">
+                                    <div class="select-value"><?= $data['denominations'][0]['value'] ?></div>
+                                    <div class="select-options">
+                                        <?php foreach ($data['denominations'] as $denomination) : ?>
+                                            <div class="select-option" data-value="<?= $denomination['value'] ?>"><?= $denomination['value'] ?></div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            <?php else : ?>
+                                <div class="select">
+                                    <input type="hidden" name="price" value="">
+                                    <div class="select-value"></div>
+                                    <div class="select-options">
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </label>
                         <label class="step-2__label" for="name">
                             <span>Имя</span>

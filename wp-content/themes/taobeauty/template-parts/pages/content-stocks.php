@@ -31,12 +31,3 @@ $stocks = get_posts([
         <?php endif; ?>
     </div>
 </section>
-
-<div class="popup-bg">
-    <div class="popup" id="info">
-        
-    </div>
-    <div class="popup-sec" id="order">
-
-    </div>
-</div>

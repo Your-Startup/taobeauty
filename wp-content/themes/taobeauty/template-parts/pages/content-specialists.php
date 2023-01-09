@@ -62,7 +62,7 @@ $specialists = get_posts(array(
                                         <div class="category__spec-imgs">
                                             <?php if ($data['certificates']) : ?>
                                                 <?php foreach ($data['certificates'] as $certificate) : ?>
-                                                    <img src="<?= $certificate ?>" alt="">
+                                                    <img src="<?= $certificate ?>" alt="" class="js-open-zoom no-close">
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
                                         </div>
@@ -70,7 +70,7 @@ $specialists = get_posts(array(
                                 </div>
                             </div>
                             <div class="category__links">
-                                <button class="yellow__btn-link category__link">Записаться</button>
+                                <button class="yellow__btn-link category__link no-close">Записаться</button>
                                 <button class="border-btn category__link js-more">Подробнее</button>
                             </div>
                             <button class="category__arr accordion__heading">

@@ -12,10 +12,10 @@ $slider = get_field('slider');
                 <?php foreach ($slider as $slide) : ?>
                     <div class="swiper-slide">
                         <div class="container">
-                            <h2 class="main-slider__title"><?= $slide['title'] ?></h2>
+                            <h2 class="main-slider__title" style="text-align: <?= $slide['align'] ?>"><?= $slide['title'] ?></h2>
                             <div class="main-slider__text"><?= $slide['text'] ?></div>
                             <?php if ($slide['link']) : ?>
-                                <a href="<?= $slide['link'] ?>" class="btn main-slider__btn">Подробнее</a>
+                                <a href="<?= $slide['link'] ?>" class="btn main-slider__btn" onclick="window.location = '<?= $slide['link'] ?>'">Подробнее</a>
                             <?php endif; ?>
                         </div>
                         <img src="<?= $slide['img'] ?>" alt="">

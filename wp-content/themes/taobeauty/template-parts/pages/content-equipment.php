@@ -18,7 +18,7 @@ $equipments = get_field('equipments');
                             <h3>
                                 <?= $equipment['title'] ?>
                             </h3>
-                            <a class="category__docs-link" href="<?= $equipment['file']?>" download>
+                            <a class="category__docs-link" href="<?= $equipment['file']?>" target="_blank">
                                 <div class="category__docs-bg">
                                     <div class="file">
                                         <div class="file-extension"><?= pathinfo($equipment['file'])['extension'] ?></div>
